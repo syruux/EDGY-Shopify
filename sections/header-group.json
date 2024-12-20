@@ -30,9 +30,9 @@
         "text_size": "text-xs",
         "navigation_mode": "scrolling",
         "scrolling_speed": 10,
-        "background": "#1a1a1a",
-        "background_gradient": "",
-        "text_color": "#ffffff"
+        "background": "{{ shop.brand.colors.secondary[0].foreground }}",
+        "background_gradient": "linear-gradient(295deg, rgba(249, 208, 163, 1) 6%, rgba(254, 80, 1, 1) 49%, rgba(249, 224, 167, 1) 97%)",
+        "text_color": "{{ shop.brand.colors.secondary[0].background }}"
       }
     },
     "header": {
@@ -40,9 +40,9 @@
       "settings": {
         "enable_sticky": true,
         "hide_on_scroll": false,
-        "logo": "{{shop.brand.logo}}",
-        "logo_max_width": 120,
-        "logo_mobile_max_width": 100,
+        "logo": "shopify://shop_images/EDGY_2.png",
+        "logo_max_width": 150,
+        "logo_mobile_max_width": 120,
         "menu": "",
         "sidebar_menu": "main-menu",
         "secondary_menu": "",
