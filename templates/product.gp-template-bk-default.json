@@ -65,7 +65,7 @@
         },
         "rating": {
           "settings": {
-            "show_empty": false
+            "show_empty": true
           },
           "type": "rating"
         },
@@ -81,9 +81,9 @@
         },
         "variant_picker": {
           "settings": {
-            "color_mode": "color",
+            "color_mode": "variant",
             "hide_sold_out_variants": false,
-            "selector_mode": "block",
+            "selector_mode": "dropdown",
             "size_chart_page": "",
             "stack_blocks": true
           },
