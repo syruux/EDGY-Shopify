@@ -35,7 +35,7 @@
         "rating": {
           "type": "rating",
           "settings": {
-            "show_empty": false
+            "show_empty": true
           }
         },
         "payment_terms": {
