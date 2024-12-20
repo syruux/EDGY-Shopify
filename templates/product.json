@@ -105,7 +105,7 @@
         "background": "rgba(0,0,0,0)",
         "background_gradient": "",
         "text_color": "{{ shop.brand.colors.primary[0].background }}",
-        "input_background": "rgba(0,0,0,0)",
+        "input_background": "{{ shop.brand.colors.secondary[0].background }}",
         "input_text_color": "{{ shop.brand.colors.primary[0].background }}"
       }
     },

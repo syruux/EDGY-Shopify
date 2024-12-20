@@ -36,6 +36,8 @@
     "text_font": "din_next_n4",
     "show_page_transition": true,
     "heading_apparition": "split_fade",
+    "color_swatch_style": "square",
+    "discount_mode": "percentage",
     "product_color_display": "swatch",
     "product_info_alignment": "start",
     "cart_type": "drawer",
