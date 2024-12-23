@@ -31,7 +31,7 @@
         "navigation_mode": "scrolling",
         "scrolling_speed": 10,
         "background": "{{ shop.brand.colors.secondary[0].foreground }}",
-        "background_gradient": "linear-gradient(295deg, rgba(249, 208, 163, 1) 6%, rgba(254, 80, 1, 1) 49%, rgba(249, 224, 167, 1) 97%)",
+        "background_gradient": "",
         "text_color": "{{ shop.brand.colors.secondary[0].background }}"
       }
     },
