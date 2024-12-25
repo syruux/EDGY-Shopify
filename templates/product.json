@@ -9,6 +9,13 @@
  */
 {
   "sections": {
+    "gp_shopify_original_section_545603016502281075": {
+      "type": "gp-section-545603016502281075",
+      "settings": {
+        "section_preload": "true",
+        "checksum": "9e5835ad446076d19726cec9df23b1d6da489370cdbcbe32805f14590aeef192_1_1"
+      }
+    },
     "main": {
       "type": "main-product",
       "blocks": {
@@ -133,6 +140,7 @@
     }
   },
   "order": [
+    "gp_shopify_original_section_545603016502281075",
     "main",
     "related-products"
   ]
