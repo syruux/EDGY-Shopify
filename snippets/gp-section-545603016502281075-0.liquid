@@ -1106,106 +1106,334 @@
       style="--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--op:100%;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll;--ta:left"
       data-keep-class="true"
       class="gKx9V6ACI_ "
-    ><div><!-- Container del wizard -->
-<div id="razorWizard">
-  <!-- Step 1 -->
+    ><div><!-- WIZARD: Componi il tuo set --> 
+<div id="wizard-container">
+  
+  <!-- Barra di avanzamento semplice (opzionale) -->
+  <div id="wizard-progress">
+    <div class="wizard-step-indicator step-active" data-step="1">1. Rasoio</div>
+    <div class="wizard-step-indicator" data-step="2">2. Stand</div>
+    <div class="wizard-step-indicator" data-step="3">3. Lamette</div>
+  </div>
+
+  <!-- STEP 1: Scegli Rasoio -->
   <section class="wizard-step step-active" id="step1">
     <h2>1. Scegli il tuo Rasoio</h2>
-    <div>
-      <button data-variant-id="12345" class="select-rasoio">Rasoio Nero</button>
-      <button data-variant-id="67890" class="select-rasoio">Rasoio Argento</button>
+    <!-- Esempio con 2 varianti -->
+    <div class="options-row">
+      <!-- Variante #1 -->
+      <button 
+        class="option-btn select-rasoio" 
+        data-variant-id="12345" 
+        data-title="Rasoio Nero"
+      >
+        Rasoio Nero
+      </button>
+      <!-- Variante #2 -->
+      <button 
+        class="option-btn select-rasoio" 
+        data-variant-id="67890" 
+        data-title="Rasoio Argento"
+      >
+        Rasoio Argento
+      </button>
     </div>
-    <button id="goToStep2">Vai allo Step 2</button>
+    <button class="next-step-btn" data-next="2" id="goToStep2" disabled>
+      Vai allo Step 2
+    </button>
   </section>
 
-  <!-- Step 2 -->
+  <!-- STEP 2: Stand opzionale -->
   <section class="wizard-step" id="step2">
     <h2>2. Aggiungi uno Stand?</h2>
-    <div>
-      <button data-variant-id="22222" class="select-stand">Sì, aggiungi stand</button>
-      <button class="skip-stand">No, grazie</button>
+    <div class="options-row">
+      <!-- Stand -->
+      <button 
+        class="option-btn select-stand" 
+        data-variant-id="22222" 
+        data-title="Stand Elegante"
+      >
+        Aggiungi Stand
+      </button>
+      <!-- Skip -->
+      <button 
+        class="option-btn skip-stand" 
+        data-title="Nessuno Stand"
+      >
+        Nessuno Stand
+      </button>
     </div>
-    <button id="goToStep3">Vai allo Step 3</button>
+    <button class="next-step-btn" data-next="3" id="goToStep3" disabled>
+      Vai allo Step 3
+    </button>
   </section>
 
-  <!-- Step 3 -->
+  <!-- STEP 3: Lamette (2 scelte) -->
   <section class="wizard-step" id="step3">
     <h2>3. Scegli le Lamette</h2>
-    <div>
-      <button data-variant-id="33333" class="select-lamette">10 pz</button>
-      <button data-variant-id="44444" class="select-lamette">20 pz</button>
+    <div class="options-row">
+      <button 
+        class="option-btn select-lamette" 
+        data-variant-id="33333" 
+        data-title="Lamette 10 pz"
+      >
+        10 Pz
+      </button>
+      <button 
+        class="option-btn select-lamette" 
+        data-variant-id="44444" 
+        data-title="Lamette 20 pz"
+      >
+        20 Pz
+      </button>
     </div>
-    <button id="completeSet">Completa e Vai al Checkout</button>
+    <button class="next-step-btn" id="completeSet" disabled>
+      Completa e Vai al Checkout
+    </button>
   </section>
 </div>
 
-<script>
-  let selectedProducts = [];
-
-  document.querySelectorAll('.select-rasoio').forEach(btn => {
-    btn.addEventListener('click', () => {
-      // Memorizza ID variante rasoio
-      selectedProducts = selectedProducts.filter(prod => prod.type !== 'rasoio');
-      selectedProducts.push({ type: 'rasoio', id: btn.dataset.variantId });
-    });
-  });
-
-  // STAND
-  document.querySelectorAll('.select-stand').forEach(btn => {
-    btn.addEventListener('click', () => {
-      // Memorizza ID stand
-      selectedProducts = selectedProducts.filter(prod => prod.type !== 'stand');
-      selectedProducts.push({ type: 'stand', id: btn.dataset.variantId });
-    });
-  });
-
-  document.querySelector('.skip-stand').addEventListener('click', () => {
-    // Non aggiunge stand
-  });
-
-  // LAMETTE
-  document.querySelectorAll('.select-lamette').forEach(btn => {
-    btn.addEventListener('click', () => {
-      // Memorizza ID lamette
-      selectedProducts = selectedProducts.filter(prod => prod.type !== 'lamette');
-      selectedProducts.push({ type: 'lamette', id: btn.dataset.variantId });
-    });
-  });
-
-  // Passare allo step successivo
-  document.getElementById('goToStep2').addEventListener('click', () => {
-    document.getElementById('step1').classList.remove('step-active');
-    document.getElementById('step2').classList.add('step-active');
-  });
-
-  document.getElementById('goToStep3').addEventListener('click', () => {
-    document.getElementById('step2').classList.remove('step-active');
-    document.getElementById('step3').classList.add('step-active');
-  });
-
-  // Completa e Vai al Checkout
-  document.getElementById('completeSet').addEventListener('click', () => {
-    // Esempio di un'unica chiamata AJAX per aggiungere tutti i prodotti
-    // Se sei su Shopify:
-    fetch('/cart/add.js', {
-      method: 'POST',
-      headers: {'Content-Type': 'application/json'},
-      body: JSON.stringify({ items: selectedProducts.map(prod => ({
-          id: prod.id,
-          quantity: 1
-        })) })
-    })
-    .then(res => res.json())
-    .then(() => {
-      window.location.href = '/checkout';
-    });
-    alert('Prodotti selezionati: ' + JSON.stringify(selectedProducts));
-  });
-</script>
-
 <style>
-  .wizard-step { display: none; }
-  .wizard-step.step-active { display: block; }
-</style></div></div>
+/* ========== STILE BASE ========== */
+
+/* Contenitore principale */
+#wizard-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 1rem;
+  font-family: Arial, sans-serif;
+}
+
+/* Barra di avanzamento (opzionale) */
+#wizard-progress {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 1.5rem;
+}
+
+.wizard-step-indicator {
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  background-color: #f0f0f0;
+  cursor: pointer;
+  opacity: 0.6;
+  transition: all 0.3s;
+}
+
+.wizard-step-indicator.step-active {
+  opacity: 1;
+  background-color: #fd5001; /* colore in focus */
+  color: #ffffff;
+}
+
+/* Step (sezioni) */
+.wizard-step {
+  display: none;
+  text-align: center;
+}
+.wizard-step.step-active {
+  display: block;
+}
+
+/* Griglia orizzontale di opzioni */
+.options-row {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin: 1rem 0;
+}
+
+/* Bottoni delle varianti/opzioni */
+.option-btn {
+  border: 2px solid #001233;
+  background-color: #ffffff;
+  color: #001233;
+  padding: 1rem;
+  min-width: 120px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.option-btn:hover {
+  background-color: #f5f5f5;
+}
+
+/* Bottoni next-step */
+.next-step-btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  background-color: #001233;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  opacity: 0.5;
+  transition: opacity 0.3s;
+}
+.next-step-btn:hover {
+  opacity: 0.8;
+}
+.next-step-btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.3;
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 600px) {
+  .options-row {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+</style>
+
+<script>
+/* =========================================
+   LOGICA WIZARD + AGGIUNTA AL CARRELLO
+   ========================================= */
+
+// Per memorizzare i prodotti selezionati
+let selectedProducts = {
+  rasoio: null,
+  stand: null,
+  lamette: null
+};
+
+// STEP 1: Selezione Rasoio
+document.querySelectorAll('.select-rasoio').forEach(btn => {
+  btn.addEventListener('click', () => {
+    // Memorizza la scelta
+    selectedProducts.rasoio = {
+      id: btn.dataset.variantId,
+      title: btn.dataset.title
+    };
+    // Evidenzia il bottone cliccato e deseleziona gli altri
+    document.querySelectorAll('.select-rasoio').forEach(b => {
+      b.style.backgroundColor = '#fff';
+    });
+    btn.style.backgroundColor = '#fd5001';
+    btn.style.color = '#fff';
+
+    // Attiva pulsante "Vai allo Step 2"
+    document.getElementById('goToStep2').disabled = false;
+  });
+});
+
+// STEP 2: Stand (opzionale)
+document.querySelectorAll('.select-stand').forEach(btn => {
+  btn.addEventListener('click', () => {
+    selectedProducts.stand = {
+      id: btn.dataset.variantId,
+      title: btn.dataset.title
+    };
+    // Evidenzia il bottone e "deseleziona" skip
+    document.querySelectorAll('.select-stand').forEach(b => {
+      b.style.backgroundColor = '#fff';
+      b.style.color = '#001233';
+    });
+    btn.style.backgroundColor = '#fd5001';
+    btn.style.color = '#fff';
+    // Disabilita eventuale skip
+    document.querySelector('.skip-stand').style.backgroundColor = '#fff';
+    document.querySelector('.skip-stand').style.color = '#001233';
+
+    // Attiva pulsante "Vai allo Step 3"
+    document.getElementById('goToStep3').disabled = false;
+  });
+});
+
+// Se l’utente salta lo Stand
+document.querySelector('.skip-stand').addEventListener('click', () => {
+  selectedProducts.stand = null; // niente stand
+  // Evidenzia skip
+  document.querySelector('.skip-stand').style.backgroundColor = '#fd5001';
+  document.querySelector('.skip-stand').style.color = '#fff';
+  // Deseleziona pulsante stand
+  document.querySelectorAll('.select-stand').forEach(b => {
+    b.style.backgroundColor = '#fff';
+    b.style.color = '#001233';
+  });
+
+  // Attiva pulsante "Vai allo Step 3"
+  document.getElementById('goToStep3').disabled = false;
+});
+
+// STEP 3: Lamette
+document.querySelectorAll('.select-lamette').forEach(btn => {
+  btn.addEventListener('click', () => {
+    selectedProducts.lamette = {
+      id: btn.dataset.variantId,
+      title: btn.dataset.title
+    };
+    // Evidenzia il bottone cliccato
+    document.querySelectorAll('.select-lamette').forEach(b => {
+      b.style.backgroundColor = '#fff';
+      b.style.color = '#001233';
+    });
+    btn.style.backgroundColor = '#fd5001';
+    btn.style.color = '#fff';
+
+    // Attiva pulsante "Completa e Vai al Checkout"
+    document.getElementById('completeSet').disabled = false;
+  });
+});
+
+// Navigazione fra step
+function goToStep(stepNumber) {
+  // Nascondi tutti i .wizard-step
+  document.querySelectorAll('.wizard-step').forEach(s => s.classList.remove('step-active'));
+  // Mostra lo step desiderato
+  document.getElementById('step' + stepNumber).classList.add('step-active');
+
+  // Aggiorna la barra di avanzamento
+  document.querySelectorAll('.wizard-step-indicator').forEach(indicator => {
+    indicator.classList.remove('step-active');
+    if (indicator.dataset.step == stepNumber) {
+      indicator.classList.add('step-active');
+    }
+  });
+}
+
+// Pulsanti "Vai al prossimo step"
+document.getElementById('goToStep2').addEventListener('click', () => {
+  goToStep(2);
+});
+document.getElementById('goToStep3').addEventListener('click', () => {
+  goToStep(3);
+});
+
+// Pulsante finale: Aggiunge i prodotti e reindirizza
+document.getElementById('completeSet').addEventListener('click', () => {
+  // Costruiamo l'array di items da aggiungere
+  let itemsToAdd = [];
+
+  if (selectedProducts.rasoio) {
+    itemsToAdd.push({ id: selectedProducts.rasoio.id, quantity: 1 });
+  }
+  if (selectedProducts.stand) {
+    itemsToAdd.push({ id: selectedProducts.stand.id, quantity: 1 });
+  }
+  if (selectedProducts.lamette) {
+    itemsToAdd.push({ id: selectedProducts.lamette.id, quantity: 1 });
+  }
+
+  // Esempio di chiamata AJAX a Shopify
+  // /cart/add.js con multiple items
+  fetch('/cart/add.js', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ items: itemsToAdd })
+  })
+    .then(response => response.json())
+    .then(data => {
+      // Reindirizza al checkout
+      window.location.href = '/checkout';
+    })
+    .catch(error => {
+      console.error('Errore durante l\'aggiunta al carrello:', error);
+      alert('Si è verificato un problema. Riprova più tardi.');
+    });
+});
+</script></div></div>
   
     </div>
