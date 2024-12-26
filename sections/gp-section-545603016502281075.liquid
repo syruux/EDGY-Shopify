@@ -2616,6 +2616,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  gap: 5px;
 }
 
 /* Contenitore icona: 30% */
@@ -2634,9 +2635,9 @@
 /* Icona SVG: dimensioni regolabili */
 .edgy-icon {
   display: block;
-  max-width: 70px;
   width: auto;
   height: auto;
+  max-height: 80px;
 }
 
 /* Testo con gradiente */
@@ -3023,6 +3024,211 @@ function isStepAccessible(stepNumber) {
   if (stepNumber === 1) return true; // Lo step 1 è sempre accessibile
   if (stepNumber === 2) return !!selected.rasoio; // Lo step 2 è accessibile solo se il rasoio è stato scelto
   if (stepNumber === 3) return !!selected.rasoio && selected.stand !== null; // Lo step 3 è accessibile solo se lo stand è deciso (anche "No, grazie")
+  return false;
+}
+
+        } catch(err){}
+      </script>
+    
+  
+    <div
+      
+      style="--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--op:100%;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll;--ta:left"
+      data-keep-class="true"
+      class="gxDDezxZYN "
+    ><div><div id="funnel-section">
+
+  <!-- HEADER PRINCIPALE -->
+  <div class="funnel-header">
+    <h2>Componi il tuo set EDGY</h2>
+    <p>Seleziona i tuoi preferiti per creare il bundle perfetto.</p>
+  </div>
+
+  <!-- STEP 1: SCEGLI RASOIO -->
+  <div class="funnel-step-container" id="step1-container">
+    <div class="funnel-step-header" data-step="1">
+      <h3>1. Scegli il tuo Rasoio</h3>
+    </div>
+    <div class="funnel-step-content">
+      <div class="options-row">
+        <div class="option-btn rasoio-btn" data-variant-id="49941997977938" data-color="nero">Nero</div>
+        <div class="option-btn rasoio-btn" data-variant-id="49941998010706" data-color="argento">Argento</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- STEP 2: AGGIUNGI STAND -->
+  <div class="funnel-step-container" id="step2-container">
+    <div class="funnel-step-header" data-step="2">
+      <h3>2. Aggiungi lo Stand</h3>
+    </div>
+    <div class="funnel-step-content">
+      <div class="options-row">
+        <div id="add-stand-btn" class="option-btn">Sì, lo voglio</div>
+        <div id="skip-stand-btn" class="option-btn">No, grazie</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- STEP 3: SCEGLI LAMETTE -->
+  <div class="funnel-step-container" id="step3-container">
+    <div class="funnel-step-header" data-step="3">
+      <h3>3. Scegli le Lamette</h3>
+    </div>
+    <div class="funnel-step-content">
+      <div class="options-row">
+        <div class="option-btn lamette-btn" data-variant-id="49988803494226">Pack da 10</div>
+        <div class="option-btn lamette-btn" data-variant-id="49988803526994">Pack da 100</div>
+      </div>
+      <div class="complete-purchase-container">
+        <div class="next-step-btn" id="complete-purchase" disabled>Completa l'acquisto</div>
+      </div>
+    </div>
+  </div>
+
+</div></div></div>
+  
+      <style id="custom-css-gxDDezxZYN">
+        /* Contenitore principale del funnel */
+#funnel-section {
+  max-width: 600px;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+}
+
+/* HEADER PRINCIPALE */
+.funnel-header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+.funnel-header h2 {
+  margin: 0;
+  font-size: 1.8rem;
+  color: #001233;
+}
+.funnel-header p {
+  margin: 0.5rem 0 0;
+  color: #555;
+}
+
+/* SEZIONI DEL FUNNEL */
+.funnel-step-container {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+}
+.funnel-step-header {
+  background-color: #f9f9f9;
+  padding: 1rem;
+  cursor: pointer;
+  border-bottom: 1px solid #ddd;
+}
+.funnel-step-header h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #001233;
+}
+
+/* CONTENUTO STEP */
+.funnel-step-content {
+  padding: 1rem;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: all 0.4s ease;
+}
+.funnel-step-container.active .funnel-step-content {
+  max-height: 300px; /* Altezza massima per l'animazione */
+  opacity: 1;
+}
+
+/* OPZIONI */
+.option-btn {
+  border: 2px solid #001233;
+  background-color: #fff;
+  color: #001233;
+  padding: 0.75rem 1.2rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.option-btn.selected {
+  background-color: #fd5001;
+  color: #fff;
+}
+
+      </style>
+    
+      <script id="custom-js-gxDDezxZYN">
+        try {
+          /* Stato delle scelte dell'utente */
+let selected = {
+  rasoio: null,
+  stand: null,
+  lamette: null
+};
+
+/* ---- LOGICA DELLE SEZIONI A SCOMPARSA ---- */
+document.querySelectorAll('.funnel-step-header').forEach(header => {
+  header.addEventListener('click', () => {
+    const stepNumber = parseInt(header.dataset.step);
+
+    // Espandi/contrai solo lo step corrente
+    document.querySelectorAll('.funnel-step-container').forEach(container => {
+      const currentStep = parseInt(container.querySelector('.funnel-step-header').dataset.step);
+      if (currentStep === stepNumber || isStepAccessible(currentStep)) {
+        container.classList.add('active');
+      } else {
+        container.classList.remove('active');
+      }
+    });
+  });
+});
+
+/* ---- STEP 1: SCEGLI RASOIO ---- */
+document.querySelectorAll('.rasoio-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    selected.rasoio = { id: btn.dataset.variantId, color: btn.dataset.color };
+    document.querySelectorAll('.rasoio-btn').forEach(b => b.classList.remove('selected'));
+    btn.classList.add('selected');
+    goToNextStep(2);
+  });
+});
+
+/* ---- STEP 2: AGGIUNGI STAND ---- */
+document.getElementById('add-stand-btn').addEventListener('click', () => {
+  const color = selected.rasoio.color;
+  selected.stand = { id: color === 'nero' ? 'STAND_NERO_ID' : 'STAND_ARGENTO_ID' };
+  goToNextStep(3);
+});
+document.getElementById('skip-stand-btn').addEventListener('click', () => {
+  selected.stand = null; // Indica che "No, grazie" è stato selezionato
+  goToNextStep(3);
+});
+
+/* ---- STEP 3: LAMETTE ---- */
+document.querySelectorAll('.lamette-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    selected.lamette = { id: btn.dataset.variantId };
+    document.querySelectorAll('.lamette-btn').forEach(b => b.classList.remove('selected'));
+    btn.classList.add('selected');
+    document.getElementById('complete-purchase').removeAttribute('disabled');
+  });
+});
+
+/* ---- NAVIGAZIONE AUTOMATICA ---- */
+function goToNextStep(stepNumber) {
+  document.querySelectorAll('.funnel-step-container').forEach(container => {
+    const currentStep = parseInt(container.querySelector('.funnel-step-header').dataset.step);
+    container.classList.toggle('active', currentStep === stepNumber);
+  });
+}
+
+function isStepAccessible(stepNumber) {
+  if (stepNumber === 1) return true;
+  if (stepNumber === 2) return !!selected.rasoio;
+  if (stepNumber === 3) return !!selected.stand || selected.stand === null;
   return false;
 }
 
