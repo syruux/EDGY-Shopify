@@ -2949,11 +2949,22 @@ document.getElementById('complete-purchase').addEventListener('click', () => {
   if (selected.rasoio) {
     itemsToAdd.push({ id: selected.rasoio.id, quantity: 1 });
   }
-  if (selected.stand) {
-    itemsToAdd.push({ id: selected.stand.id, quantity: 1 });
+  if (selected.stand !== undefined) {
+    // Aggiungi solo se lo stand è definito (anche se null per "No, grazie")
+    if (selected.stand) {
+      itemsToAdd.push({ id: selected.stand.id, quantity: 1 });
+    }
   }
   if (selected.lamette) {
     itemsToAdd.push({ id: selected.lamette.id, quantity: 1 });
+  }
+
+  console.log('Prodotti da aggiungere al carrello:', itemsToAdd);
+
+  // Verifica se ci sono prodotti validi
+  if (itemsToAdd.length === 0) {
+    alert('Nessun prodotto selezionato. Riprova.');
+    return;
   }
 
   // Aggiungiamo i prodotti al carrello
@@ -2966,6 +2977,10 @@ document.getElementById('complete-purchase').addEventListener('click', () => {
       if (!response.ok) {
         throw new Error('Errore nell\'aggiunta al carrello');
       }
+      return response.json();
+    })
+    .then(data => {
+      console.log('Risposta dal server:', data);
       // Reindirizza al checkout
       window.location.href = '/checkout';
     })
