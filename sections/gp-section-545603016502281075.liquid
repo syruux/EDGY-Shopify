@@ -2977,7 +2977,7 @@ function changeStep(stepNumber) {
 function isStepAccessible(stepNumber) {
   if (stepNumber === 1) return true; // Lo step 1 è sempre accessibile
   if (stepNumber === 2) return !!selected.rasoio; // Lo step 2 è accessibile solo se il rasoio è stato scelto
-  if (stepNumber === 3) return !!selected.rasoio && (selected.stand !== undefined); // Lo step 3 è accessibile se lo stand è deciso (anche "No, grazie")
+  if (stepNumber === 3) return !!selected.rasoio && selected.stand !== null; // Lo step 3 è accessibile solo se lo stand è deciso (anche "No, grazie")
   return false;
 }
 
