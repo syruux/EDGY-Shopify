@@ -2591,10 +2591,10 @@
     </div>
   </div>
 
-</div>
-
-<style>
-/* ----------------------------
+</div></div></div>
+  
+      <style id="custom-css-gsDYFLmQMK">
+        /* ----------------------------
    STRUTTURA BASE (DESKTOP)
    ---------------------------- */
 .edgy-benefits-section {
@@ -2616,35 +2616,37 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  gap: 5px;
+  gap: 10px; /* Uniforma lo spazio tra icona e testo */
 }
 
 /* Contenitore icona: 30% */
 .edgy-icon-container {
-  flex: 0 0 30%;
+  flex: 0 0 auto; /* Permette di adattare meglio lo spazio */
   display: flex;
   justify-content: center;
+  align-items: center;
+  margin-right: 10px; /* Aggiunge uno spazio uniforme tra icona e testo */
 }
 
 /* Contenitore testo: 70% */
 .edgy-text-container {
-  flex: 0 0 70%;
+  flex: 1; /* Assicura che il testo occupi lo spazio rimanente */
   text-align: center;
 }
 
 /* Icona SVG: dimensioni regolabili */
 .edgy-icon {
   display: block;
-  width: auto;
+  width: 50px; /* Mantieni le icone proporzionate */
   height: auto;
-  max-height: 80px;
+  max-height: 70px; /* Assicura che tutte le icone siano della stessa altezza */
 }
 
 /* Testo con gradiente */
 .edgy-gradient-text {
   margin: 0;
   font-weight: bold;
-  font-size: 1rem;
+  font-size: 1.1rem; /* Leggermente più grande per leggibilità */
   background: linear-gradient(90deg, #001233 0%, #fd5001 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -2730,8 +2732,9 @@
     font-size: 0.8rem;
   }
 }
-</style></div></div>
-  
+
+      </style>
+    
   
     <div
       
@@ -3033,7 +3036,7 @@ function isStepAccessible(stepNumber) {
   
     <div
       
-      style="--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--op:100%;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll;--ta:left"
+      style="--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--op:100%;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll;--ta:center"
       data-keep-class="true"
       class="gxDDezxZYN "
     ><div><div id="funnel-section">
