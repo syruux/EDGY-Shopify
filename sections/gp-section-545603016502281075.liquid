@@ -2299,7 +2299,7 @@
     data-id="gIanBFwNg4"
       
       data-id="gIanBFwNg4"
-      style="--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--mb:0px;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll">
+      style="--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--d:block;--d-mobile:block;--d-tablet:block;--op:100%;--mb:0px;--mb-mobile:0px;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll">
 
     <div
             class="gp-flex gp-flex-wrap"
@@ -2604,7 +2604,7 @@
   max-width: 1200px;
   margin: 0 auto;
   gap: 2rem;
-  padding: 2rem 1rem;
+  padding: 1rem 1rem;
 }
 
 .edgy-benefit-item {
@@ -2613,7 +2613,7 @@
   flex-direction: row; /* Icone e testo su una riga */
   align-items: center;
   justify-content: center;
-  gap: 1rem; /* Distanza tra icona e testo */
+  gap: 2rem; /* Distanza tra icona e testo */
 }
 
 /* Contenitore icona */
@@ -2654,8 +2654,7 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* Tre colonne per le icone */
     grid-template-rows: auto auto; /* Due righe: icone sopra, testo sotto */
-    gap: 1.5rem;
-    justify-items: center;
+    gap: 0.8rem;
   }
 
   .edgy-benefit-item {
@@ -2664,6 +2663,9 @@
 
   .edgy-icon-container {
     grid-row: 1; /* Prima riga: icone */
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .edgy-text-container {
@@ -2672,7 +2674,7 @@
   }
 
   .edgy-icon {
-    width: 30%; /* Icone più grandi su mobile */
+    width: 40%; /* Icone più grandi su mobile */
     max-width: 60px;
   }
 
