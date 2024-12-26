@@ -2791,8 +2791,94 @@
 </div>
 <!-- ======== FINE HTML ======== -->
 
-<style>
-/* ======== INIZIO CSS ======== */
+<script>
+/* Stato delle scelte dell'utente */
+let selected = {
+  rasoio: null,
+  stand: null,
+  lamette: null
+};
+
+/* ---- STEP 1: SCEGLI RASOIO ---- */
+document.querySelectorAll('.rasoio-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    selected.rasoio = { id: btn.dataset.variantId, color: btn.dataset.color };
+    document.querySelectorAll('.rasoio-btn').forEach(b => b.classList.remove('selected'));
+    btn.classList.add('selected');
+    document.getElementById('goToStep2').removeAttribute('disabled');
+  });
+});
+
+/* ---- STEP 2: AGGIUNGI STAND ---- */
+document.getElementById('add-stand-btn').addEventListener('click', () => {
+  const color = selected.rasoio ? selected.rasoio.color : null;
+  const standId = color === 'nero' ? 'STAND_NERO_ID' : 'STAND_ARGENTO_ID';
+  selected.stand = { id: standId };
+  document.getElementById('add-stand-btn').classList.add('selected');
+  document.getElementById('skip-stand-btn').classList.remove('selected');
+  document.getElementById('goToStep3').removeAttribute('disabled');
+});
+
+document.getElementById('skip-stand-btn').addEventListener('click', () => {
+  selected.stand = null;
+  document.getElementById('skip-stand-btn').classList.add('selected');
+  document.getElementById('add-stand-btn').classList.remove('selected');
+  document.getElementById('goToStep3').removeAttribute('disabled');
+});
+
+/* ---- STEP 3: LAMETTE ---- */
+document.querySelectorAll('.lamette-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    selected.lamette = { id: btn.dataset.variantId };
+    document.querySelectorAll('.lamette-btn').forEach(b => b.classList.remove('selected'));
+    btn.classList.add('selected');
+    document.getElementById('complete-purchase').removeAttribute('disabled');
+  });
+});
+
+/* ---- NAVIGAZIONE TRA STEP ---- */
+document.querySelectorAll('.funnel-step-indicator').forEach(header => {
+  header.addEventListener('click', () => {
+    const stepNumber = parseInt(header.dataset.step);
+
+    // Permetti solo di avanzare agli step completati
+    if (isStepAccessible(stepNumber)) {
+      changeStep(stepNumber);
+    } else {
+      alert("Completa lo step precedente prima di accedere a questo.");
+    }
+  });
+});
+
+document.querySelectorAll('.next-step-btn, .previous-step-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    if (btn.hasAttribute('disabled')) return;
+
+    const stepNumber = parseInt(btn.id.replace('goToStep', '')) || parseInt(btn.dataset.goToStep);
+    if (isStepAccessible(stepNumber)) {
+      changeStep(stepNumber);
+    }
+  });
+});
+
+function changeStep(stepNumber) {
+  document.querySelectorAll('.funnel-step').forEach(step => step.classList.remove('step-active'));
+  document.querySelectorAll('.funnel-step-indicator').forEach(indicator => indicator.classList.remove('step-active'));
+
+  document.getElementById(`funnel-step${stepNumber}`).classList.add('step-active');
+  document.querySelector(`.funnel-step-indicator[data-step="${stepNumber}"]`).classList.add('step-active');
+}
+
+function isStepAccessible(stepNumber) {
+  if (stepNumber === 1) return true;
+  if (stepNumber === 2) return !!selected.rasoio;
+  if (stepNumber === 3) return !!selected.rasoio && (selected.stand !== undefined);
+  return false;
+}
+</script></div></div>
+  
+      <style id="custom-css-gqLq4oBda6">
+        /* ======== INIZIO CSS ======== */
 
 /* Contenitore principale del funnel */
 #funnel-section {
@@ -2893,88 +2979,8 @@
   }
 }
 /* ======== FINE CSS ======== */
-</style>
-
-<script>
-/* Stato delle scelte dell'utente */
-let selected = {
-  rasoio: null,
-  stand: null,
-  lamette: null
-};
-
-/* ---- STEP 1: SCEGLI RASOIO ---- */
-document.querySelectorAll('.rasoio-btn').forEach(btn => {
-  btn.addEventListener('click', () => {
-    selected.rasoio = { id: btn.dataset.variantId, color: btn.dataset.color };
-    document.querySelectorAll('.rasoio-btn').forEach(b => b.classList.remove('selected'));
-    btn.classList.add('selected');
-    document.getElementById('goToStep2').removeAttribute('disabled');
-  });
-});
-
-/* ---- STEP 2: AGGIUNGI STAND ---- */
-document.getElementById('add-stand-btn').addEventListener('click', () => {
-  const color = selected.rasoio ? selected.rasoio.color : null;
-  const standId = color === 'nero' ? 'STAND_NERO_ID' : 'STAND_ARGENTO_ID';
-  selected.stand = { id: standId };
-  document.getElementById('add-stand-btn').classList.add('selected');
-  document.getElementById('skip-stand-btn').classList.remove('selected');
-  document.getElementById('goToStep3').removeAttribute('disabled');
-});
-
-document.getElementById('skip-stand-btn').addEventListener('click', () => {
-  selected.stand = null;
-  document.getElementById('skip-stand-btn').classList.add('selected');
-  document.getElementById('add-stand-btn').classList.remove('selected');
-  document.getElementById('goToStep3').removeAttribute('disabled');
-});
-
-/* ---- STEP 3: LAMETTE ---- */
-document.querySelectorAll('.lamette-btn').forEach(btn => {
-  btn.addEventListener('click', () => {
-    selected.lamette = { id: btn.dataset.variantId };
-    document.querySelectorAll('.lamette-btn').forEach(b => b.classList.remove('selected'));
-    btn.classList.add('selected');
-    document.getElementById('complete-purchase').removeAttribute('disabled');
-  });
-});
-
-/* ---- NAVIGAZIONE TRA STEP ---- */
-document.querySelectorAll('.funnel-step-indicator').forEach(header => {
-  header.addEventListener('click', () => {
-    const stepNumber = parseInt(header.dataset.step);
-    if (isStepAccessible(stepNumber)) {
-      changeStep(stepNumber);
-    } else {
-      alert("Completa lo step precedente prima di accedere a questo.");
-    }
-  });
-});
-
-document.querySelectorAll('.next-step-btn, .previous-step-btn').forEach(btn => {
-  btn.addEventListener('click', () => {
-    if (btn.hasAttribute('disabled')) return;
-    const step = btn.getAttribute('data-go-to-step');
-    if (step) changeStep(step);
-  });
-});
-
-function changeStep(stepNumber) {
-  document.querySelectorAll('.funnel-step').forEach(step => step.classList.remove('step-active'));
-  document.querySelectorAll('.funnel-step-indicator').forEach(indicator => indicator.classList.remove('step-active'));
-  document.getElementById(`funnel-step${stepNumber}`).classList.add('step-active');
-  document.querySelector(`.funnel-step-indicator[data-step="${stepNumber}"]`).classList.add('step-active');
-}
-
-function isStepAccessible(stepNumber) {
-  if (stepNumber === 1) return true;
-  if (stepNumber === 2) return !!selected.rasoio;
-  if (stepNumber === 3) return !!selected.stand || selected.stand === null;
-  return false;
-}
-</script></div></div>
-  
+      </style>
+    
     </div>
     </div>
    
