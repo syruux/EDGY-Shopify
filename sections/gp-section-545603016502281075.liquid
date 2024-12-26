@@ -2941,6 +2941,40 @@ document.querySelectorAll('.lamette-btn').forEach(btn => {
   });
 });
 
+/* ---- PULSANTE "Completa l'acquisto" ---- */
+document.getElementById('complete-purchase').addEventListener('click', () => {
+  // Creiamo un array di prodotti da aggiungere al carrello
+  const itemsToAdd = [];
+
+  if (selected.rasoio) {
+    itemsToAdd.push({ id: selected.rasoio.id, quantity: 1 });
+  }
+  if (selected.stand) {
+    itemsToAdd.push({ id: selected.stand.id, quantity: 1 });
+  }
+  if (selected.lamette) {
+    itemsToAdd.push({ id: selected.lamette.id, quantity: 1 });
+  }
+
+  // Aggiungiamo i prodotti al carrello
+  fetch('/cart/add.js', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ items: itemsToAdd })
+  })
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Errore nell\'aggiunta al carrello');
+      }
+      // Reindirizza al checkout
+      window.location.href = '/checkout';
+    })
+    .catch(error => {
+      console.error('Errore durante l\'aggiunta al carrello:', error);
+      alert('C\'è stato un problema durante l\'aggiunta al carrello. Riprova.');
+    });
+});
+
 /* ---- NAVIGAZIONE TRA STEP ---- */
 document.querySelectorAll('.funnel-step-indicator').forEach(header => {
   header.addEventListener('click', () => {
