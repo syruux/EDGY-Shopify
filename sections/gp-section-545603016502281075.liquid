@@ -2595,141 +2595,89 @@
   
       <style id="custom-css-gsDYFLmQMK">
         /* ----------------------------
-   STRUTTURA BASE (DESKTOP)
+   STRUTTURA BASE (DESKTOP E TABLET)
    ---------------------------- */
 .edgy-benefits-section {
-  /* Da desktop: le mettiamo tutte in un’unica row */
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  max-width: 1200px; /* o la larghezza massima preferita */
+  justify-content: space-between; /* Uniforma la distanza tra i benefit */
+  max-width: 1200px;
   margin: 0 auto;
-  gap: 1rem;
+  gap: 2rem;
   padding: 2rem 1rem;
 }
 
-/* Ciascun "benefit-item" occupa 1/3 (circa) della larghezza */
 .edgy-benefit-item {
   flex: 1 1 0;
   display: flex;
-  /* Icona a sinistra (30%) e testo a destra (70%) */
-  flex-direction: row;
+  flex-direction: row; /* Icone e testo su una riga */
   align-items: center;
   justify-content: center;
-  gap: 10px; /* Uniforma lo spazio tra icona e testo */
+  gap: 1rem; /* Distanza tra icona e testo */
 }
 
-/* Contenitore icona: 30% */
+/* Contenitore icona */
 .edgy-icon-container {
-  flex: 0 0 auto; /* Permette di adattare meglio lo spazio */
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-right: 10px; /* Aggiunge uno spazio uniforme tra icona e testo */
-}
-
-/* Contenitore testo: 70% */
-.edgy-text-container {
-  flex: 1; /* Assicura che il testo occupi lo spazio rimanente */
-  text-align: center;
+  flex: 0 0 auto;
 }
 
 /* Icona SVG: dimensioni regolabili */
 .edgy-icon {
-  display: block;
-  width: 50px; /* Mantieni le icone proporzionate */
+  width: 50px; /* Dimensioni costanti per desktop e tablet */
   height: auto;
-  max-height: 70px; /* Assicura che tutte le icone siano della stessa altezza */
+}
+
+/* Contenitore testo */
+.edgy-text-container {
+  flex: 1 1 0;
+  text-align: left;
 }
 
 /* Testo con gradiente */
 .edgy-gradient-text {
   margin: 0;
   font-weight: bold;
-  font-size: 1.1rem; /* Leggermente più grande per leggibilità */
+  font-size: 1rem;
   background: linear-gradient(90deg, #001233 0%, #fd5001 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  /* Fallback color (opzionale) */
-  /* color: #001233; */
 }
 
 /* ----------------------------
    VERSIONE MOBILE
    ---------------------------- */
 @media (max-width: 767px) {
-
-  /* 1) Passiamo a una griglia 3x2:
-        - Riga 1: 3 icone
-        - Riga 2: 3 testi
-  */
   .edgy-benefits-section {
     display: grid;
-    /* 3 colonne, 2 righe */
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: auto auto;
-    grid-gap: 1.5rem; 
-    justify-items: center; /* centra gli elementi nelle celle */
+    grid-template-columns: repeat(3, 1fr); /* Tre colonne per le icone */
+    grid-template-rows: auto auto; /* Due righe: icone sopra, testo sotto */
+    gap: 1.5rem;
+    justify-items: center;
   }
 
-  /* 2) Ogni .edgy-benefit-item non deve più creare
-        un singolo blocco con (icona + testo) in orizzontale.
-     Invece "rompiamo" la struttura usando `display: contents;`
-     per far sì che i suoi figli (.edgy-icon-container, .edgy-text-container)
-     si posizionino direttamente nella griglia.
-  */
   .edgy-benefit-item {
-    display: contents; 
+    display: contents; /* Lascia che i figli si dispongano nella griglia */
   }
 
-  /* 3) Posizioniamo di proposito
-        - le icone nella prima riga
-        - i testi nella seconda riga
-  */
-  .edgy-benefit-item:nth-child(1) .edgy-icon-container {
-    grid-column: 1;
-    grid-row: 1;
-  }
-  .edgy-benefit-item:nth-child(2) .edgy-icon-container {
-    grid-column: 2;
-    grid-row: 1;
-  }
-  .edgy-benefit-item:nth-child(3) .edgy-icon-container {
-    grid-column: 3;
-    grid-row: 1;
+  .edgy-icon-container {
+    grid-row: 1; /* Prima riga: icone */
   }
 
-  .edgy-benefit-item:nth-child(1) .edgy-text-container {
-    grid-column: 1;
-    grid-row: 2;
-  }
-  .edgy-benefit-item:nth-child(2) .edgy-text-container {
-    grid-column: 2;
-    grid-row: 2;
-  }
-  .edgy-benefit-item:nth-child(3) .edgy-text-container {
-    grid-column: 3;
-    grid-row: 2;
-  }
-
-  /* Centriamo i contenuti nelle singole celle */
-  .edgy-icon-container,
   .edgy-text-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    grid-row: 2; /* Seconda riga: testo */
+    text-align: center; /* Allinea il testo al centro */
   }
 
-  /* Adeguiamo un po’ la dimensione dell’icona se vogliamo
-     che su mobile sia più piccola o più grande. A tua scelta. */
   .edgy-icon {
-    max-width: 30px; 
+    width: 30%; /* Icone più grandi su mobile */
+    max-width: 60px;
   }
 
-  /* In mobile, il testo potrebbe avere un font più piccolo
-     o uguale, a tua scelta. */
   .edgy-gradient-text {
-    font-size: 0.8rem;
+    font-size: 0.9rem; /* Font leggermente più piccolo su mobile */
   }
 }
 
