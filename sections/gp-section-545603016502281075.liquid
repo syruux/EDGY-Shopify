@@ -2793,18 +2793,18 @@ let selected = {
 /* ---- LOGICA DELLE SEZIONI A SCOMPARSA ---- */
 document.querySelectorAll('.funnel-step-header').forEach(header => {
   header.addEventListener('click', () => {
-    const stepNumber = parseInt(header.dataset.step);
+    const stepContainer = header.parentElement;
+    const isActive = stepContainer.classList.contains('active');
 
-    // Espandi/contrai solo lo step corrente
+    // Chiudi tutte le sezioni
     document.querySelectorAll('.funnel-step-container').forEach(container => {
-      const currentStep = parseInt(container.querySelector('.funnel-step-header').dataset.step);
-      if (currentStep === stepNumber || isStepAccessible(currentStep)) {
-        container.classList.add('active');
-        container.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      } else {
-        container.classList.remove('active');
-      }
+      container.classList.remove('active');
     });
+
+    // Riapri solo la sezione cliccata se era chiusa
+    if (!isActive) {
+      stepContainer.classList.add('active');
+    }
   });
 });
 
