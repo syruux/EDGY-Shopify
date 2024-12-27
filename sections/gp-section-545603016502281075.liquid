@@ -2820,12 +2820,25 @@ document.querySelectorAll('.rasoio-btn').forEach(btn => {
 
 /* ---- STEP 2: AGGIUNGI STAND ---- */
 document.getElementById('add-stand-btn').addEventListener('click', () => {
+  if (!selected.rasoio) {
+    alert("Seleziona prima un rasoio per procedere.");
+    return;
+  }
   const color = selected.rasoio.color;
   selected.stand = { id: color === 'nero' ? 'STAND_NERO_ID' : 'STAND_ARGENTO_ID' };
+  document.getElementById('add-stand-btn').classList.add('selected');
+  document.getElementById('skip-stand-btn').classList.remove('selected');
   goToNextStep(3);
 });
+
 document.getElementById('skip-stand-btn').addEventListener('click', () => {
+  if (!selected.rasoio) {
+    alert("Seleziona prima un rasoio per procedere.");
+    return;
+  }
   selected.stand = null; // Indica che "No, grazie" è stato selezionato
+  document.getElementById('skip-stand-btn').classList.add('selected');
+  document.getElementById('add-stand-btn').classList.remove('selected');
   goToNextStep(3);
 });
 
