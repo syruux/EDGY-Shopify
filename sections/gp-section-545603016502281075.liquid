@@ -2346,8 +2346,16 @@
     </div>
     <div class="funnel-step-content">
       <div class="options-row">
-        <div class="option-btn rasoio-btn" data-variant-id="49941997977938" data-color="nero">Nero</div>
-        <div class="option-btn rasoio-btn" data-variant-id="49941998010706" data-color="argento">Argento</div>
+        <div class="option-btn rasoio-btn" data-variant-id="49941997977938" data-color="nero">
+          <img src="/path/to/nero.jpg" alt="Rasoio Nero" class="product-image">
+          <span class="product-title">Nero</span>
+          <span class="product-price"><s>€49.99</s> €39.99</span>
+        </div>
+        <div class="option-btn rasoio-btn" data-variant-id="49941998010706" data-color="argento">
+          <img src="/path/to/argento.jpg" alt="Rasoio Argento" class="product-image">
+          <span class="product-title">Argento</span>
+          <span class="product-price"><s>€49.99</s> €39.99</span>
+        </div>
       </div>
     </div>
   </div>
@@ -2359,8 +2367,14 @@
     </div>
     <div class="funnel-step-content">
       <div class="options-row">
-        <div id="add-stand-btn" class="option-btn">Sì, lo voglio</div>
-        <div id="skip-stand-btn" class="option-btn">No, grazie</div>
+        <div id="add-stand-btn" class="option-btn">
+          <img src="/path/to/stand.jpg" alt="Stand" class="product-image">
+          <span class="product-title">Sì, lo voglio</span>
+          <span class="product-price"><s>€29.99</s> €19.99</span>
+        </div>
+        <div id="skip-stand-btn" class="option-btn">
+          <span class="product-title">No, grazie</span>
+        </div>
       </div>
     </div>
   </div>
@@ -2372,8 +2386,16 @@
     </div>
     <div class="funnel-step-content">
       <div class="options-row">
-        <div class="option-btn lamette-btn" data-variant-id="49988803494226">Pack da 10</div>
-        <div class="option-btn lamette-btn" data-variant-id="49988803526994">Pack da 100</div>
+        <div class="option-btn lamette-btn" data-variant-id="49988803494226">
+          <img src="/path/to/lamette10.jpg" alt="Pack da 10 Lamette" class="product-image">
+          <span class="product-title">Pack da 10</span>
+          <span class="product-price"><s>€14.99</s> €9.99</span>
+        </div>
+        <div class="option-btn lamette-btn" data-variant-id="49988803526994">
+          <img src="/path/to/lamette100.jpg" alt="Pack da 100 Lamette" class="product-image">
+          <span class="product-title">Pack da 100</span>
+          <span class="product-price"><s>€99.99</s> €59.99</span>
+        </div>
       </div>
       <div class="complete-purchase-container">
         <div class="next-step-btn" id="complete-purchase" disabled>Completa l'acquisto</div>
@@ -2471,12 +2493,16 @@
   border: 2px solid #001233;
   background-color: #fff;
   color: #001233;
-  padding: 0.75rem 1.2rem;
+  padding: 1rem;
   cursor: pointer;
   transition: all 0.3s;
   border-radius: 8px;
   font-size: 1rem;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
 }
 .option-btn:hover {
   background-color: #fd5001;
@@ -2487,6 +2513,24 @@
 .option-btn.selected {
   background-color: #fd5001;
   color: #fff;
+}
+
+.product-image {
+  width: 100px;
+  height: auto;
+  border-radius: 8px;
+}
+.product-title {
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+.product-price {
+  font-size: 0.9rem;
+  color: #001233;
+}
+.product-price s {
+  color: #888;
+  margin-right: 5px;
 }
 
 /* PULSANTE COMPLETA L'ACQUISTO */
