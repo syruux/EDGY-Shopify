@@ -2347,14 +2347,18 @@
     <div class="funnel-step-content">
       <div class="options-row">
         <div class="option-btn rasoio-btn" data-variant-id="49941997977938" data-color="nero">
-          <img src="/path/to/nero.jpg" alt="Rasoio Nero" class="product-image">
-          <span class="product-title">Nero</span>
-          <span class="product-price"><s>€49.99</s> €39.99</span>
+          <img src="{{ nero.image }}" alt="Rasoio Nero" class="product-image">
+          <div class="product-info">
+            <span class="product-title">Nero</span>
+            <span class="product-price"><s>{{ nero.original_price }}</s> {{ nero.discounted_price }}</span>
+          </div>
         </div>
         <div class="option-btn rasoio-btn" data-variant-id="49941998010706" data-color="argento">
-          <img src="/path/to/argento.jpg" alt="Rasoio Argento" class="product-image">
-          <span class="product-title">Argento</span>
-          <span class="product-price"><s>€49.99</s> €39.99</span>
+          <img src="{{ argento.image }}" alt="Rasoio Argento" class="product-image">
+          <div class="product-info">
+            <span class="product-title">Argento</span>
+            <span class="product-price"><s>{{ argento.original_price }}</s> {{ argento.discounted_price }}</span>
+          </div>
         </div>
       </div>
     </div>
@@ -2368,12 +2372,16 @@
     <div class="funnel-step-content">
       <div class="options-row">
         <div id="add-stand-btn" class="option-btn">
-          <img src="/path/to/stand.jpg" alt="Stand" class="product-image">
-          <span class="product-title">Sì, lo voglio</span>
-          <span class="product-price"><s>€29.99</s> €19.99</span>
+          <img src="{{ stand.image }}" alt="Stand" class="product-image">
+          <div class="product-info">
+            <span class="product-title">Sì, lo voglio</span>
+            <span class="product-price"><s>{{ stand.original_price }}</s> {{ stand.discounted_price }}</span>
+          </div>
         </div>
         <div id="skip-stand-btn" class="option-btn">
-          <span class="product-title">No, grazie</span>
+          <div class="product-info">
+            <span class="product-title">No, grazie</span>
+          </div>
         </div>
       </div>
     </div>
@@ -2387,14 +2395,18 @@
     <div class="funnel-step-content">
       <div class="options-row">
         <div class="option-btn lamette-btn" data-variant-id="49988803494226">
-          <img src="/path/to/lamette10.jpg" alt="Pack da 10 Lamette" class="product-image">
-          <span class="product-title">Pack da 10</span>
-          <span class="product-price"><s>€14.99</s> €9.99</span>
+          <img src="{{ lamette10.image }}" alt="Pack da 10 Lamette" class="product-image">
+          <div class="product-info">
+            <span class="product-title">Pack da 10</span>
+            <span class="product-price"><s>{{ lamette10.original_price }}</s> {{ lamette10.discounted_price }}</span>
+          </div>
         </div>
         <div class="option-btn lamette-btn" data-variant-id="49988803526994">
-          <img src="/path/to/lamette100.jpg" alt="Pack da 100 Lamette" class="product-image">
-          <span class="product-title">Pack da 100</span>
-          <span class="product-price"><s>€99.99</s> €59.99</span>
+          <img src="{{ lamette100.image }}" alt="Pack da 100 Lamette" class="product-image">
+          <div class="product-info">
+            <span class="product-title">Pack da 100</span>
+            <span class="product-price"><s>{{ lamette100.original_price }}</s> {{ lamette100.discounted_price }}</span>
+          </div>
         </div>
       </div>
       <div class="complete-purchase-container">
@@ -2406,7 +2418,7 @@
 </div>
 
 <style>
-/* Contenitore principale del funnel */
+/* CONTENITORE PRINCIPALE */
 #funnel-section {
   max-width: 600px;
   margin: 0 auto;
@@ -2433,7 +2445,7 @@
   font-size: 1rem;
 }
 
-/* Progress Bar */
+/* PROGRESS BAR */
 .progress-bar {
   display: flex;
   justify-content: space-between;
@@ -2488,7 +2500,7 @@
   opacity: 1;
 }
 
-/* OPZIONI */
+/* BOTTONI OPZIONE */
 .option-btn {
   border: 2px solid #001233;
   background-color: #fff;
@@ -2496,18 +2508,19 @@
   padding: 1rem;
   cursor: pointer;
   transition: all 0.3s;
-  border-radius: 8px;
+  border-radius: 0;
   font-size: 1rem;
   text-align: center;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  gap: 0.5rem;
+  gap: 1rem;
+  justify-content: flex-start;
 }
 .option-btn:hover {
   background-color: #fd5001;
   color: #fff;
-  transform: scale(1.05);
+  transform: scale(1.02);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 .option-btn.selected {
@@ -2516,9 +2529,14 @@
 }
 
 .product-image {
-  width: 100px;
+  width: 80px;
   height: auto;
-  border-radius: 8px;
+  border-radius: 0;
+}
+.product-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 .product-title {
   font-weight: bold;
@@ -2533,7 +2551,7 @@
   margin-right: 5px;
 }
 
-/* PULSANTE COMPLETA L'ACQUISTO */
+/* PULSANTE COMPLETA ACQUISTO */
 #complete-purchase {
   background-color: #001233;
   color: white;
