@@ -2578,15 +2578,25 @@ document.getElementById('complete-purchase').addEventListener('click', () => {
   }
 
   // Raccogli i dettagli dell'ordine
-  const orderDetails = {
-    rasoio: selected.rasoio,
-    stand: selected.stand,
-    lamette: selected.lamette
-  };
+  const items = [
+    { id: selected.rasoio.id, quantity: 1 },
+    selected.stand ? { id: selected.stand.id, quantity: 1 } : null,
+    { id: selected.lamette.id, quantity: 1 }
+  ].filter(Boolean);
 
-  // Simula il completamento dell'acquisto (puoi sostituire con una chiamata API)
-  console.log("Dati dell'ordine:", orderDetails);
-  alert("Acquisto completato con successo! Grazie per aver scelto EDGY.");
+  // Aggiungi gli articoli al carrello e reindirizza al checkout
+  fetch('/cart/add.js', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ items })
+  })
+    .then(() => {
+      window.location.href = '/checkout';
+    })
+    .catch(error => {
+      console.error('Errore durante l\'aggiunta al carrello:', error);
+      alert("Si è verificato un errore. Riprova.");
+    });
 });
 
 </script></div></div>
