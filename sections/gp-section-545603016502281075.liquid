@@ -2527,7 +2527,7 @@ document.getElementById('add-stand-btn').addEventListener('click', () => {
     return;
   }
   const color = selected.rasoio.color;
-  selected.stand = { id: color === 'nero' ? 'STAND_NERO_ID' : 'STAND_ARGENTO_ID' };
+  selected.stand = { id: color === 'nero' ? '49984888996178' : '49984889028946' };
   document.getElementById('add-stand-btn').classList.add('selected');
   document.getElementById('skip-stand-btn').classList.remove('selected');
   goToNextStep(3);
@@ -2576,7 +2576,7 @@ document.getElementById('complete-purchase').addEventListener('click', async () 
     return;
   }
 
-  // Raccogli i dettagli degli articoli da aggiungere al carrello
+  // Verifica e raccogli i dettagli degli articoli da aggiungere al carrello
   const items = [
     { id: selected.rasoio.id, quantity: 1 },
     selected.stand ? { id: selected.stand.id, quantity: 1 } : null,
@@ -2584,7 +2584,7 @@ document.getElementById('complete-purchase').addEventListener('click', async () 
   ].filter(Boolean);
 
   try {
-    // Aggiungi articoli al carrello
+    // Aggiungi articoli al carrello uno alla volta
     for (const item of items) {
       await fetch('/cart/add.js', {
         method: 'POST',
@@ -2593,7 +2593,8 @@ document.getElementById('complete-purchase').addEventListener('click', async () 
       });
     }
 
-    // Reindirizza al checkout
+    // Conferma aggiunta e reindirizza al checkout
+    console.log("Tutti i prodotti sono stati aggiunti al carrello:", items);
     window.location.href = '/checkout';
   } catch (error) {
     console.error('Errore durante l\'aggiunta al carrello:', error);
