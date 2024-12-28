@@ -2620,15 +2620,15 @@ document.getElementById('complete-purchase').addEventListener('click', async () 
 
 /* ---- UPDATE PROGRESS BAR ---- */
 function updateProgressBar() {
-  const steps = [
-    selected.rasoio !== null,
-    selected.stand !== null || selected.stand === null,
-    selected.lamette !== null
+  const progressSteps = [
+    !!selected.rasoio, // Step 1: Rasoio selezionato
+    selected.rasoio !== null && (selected.stand !== null || selected.stand === null), // Step 2: Stand selezionato o saltato
+    !!selected.lamette // Step 3: Lamette selezionate
   ];
 
-  steps.forEach((step, index) => {
+  progressSteps.forEach((isActive, index) => {
     const progressStep = document.getElementById(`progress-step-${index + 1}`);
-    if (step) {
+    if (isActive) {
       progressStep.classList.add('active');
     } else {
       progressStep.classList.remove('active');
@@ -2636,12 +2636,16 @@ function updateProgressBar() {
   });
 }
 
-/* ---- NAVIGAZIONE AUTOMATICA ---- */
+/* ---- LOGICA PER NAVIGAZIONE AUTOMATICA ---- */
 function goToNextStep(stepNumber) {
   document.querySelectorAll('.funnel-step-container').forEach((container, index) => {
     container.classList.toggle('active', index + 1 === stepNumber);
   });
+
+  // Aggiorna la progress bar al passaggio tra gli step
+  updateProgressBar();
 }
+
 </script></div></div>
   
     </div>
