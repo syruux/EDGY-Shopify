@@ -2622,7 +2622,7 @@ document.getElementById('complete-purchase').addEventListener('click', async () 
 function updateProgressBar() {
   const progressSteps = [
     !!selected.rasoio, // Step 1: Rasoio selezionato
-    selected.rasoio !== null && (selected.stand !== null || selected.stand === null), // Step 2: Stand selezionato o saltato
+    selected.rasoio !== null && selected.stand !== null, // Step 2: Stand selezionato o saltato
     !!selected.lamette // Step 3: Lamette selezionate
   ];
 
