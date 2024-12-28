@@ -2556,7 +2556,7 @@ document.getElementById('add-stand-btn').addEventListener('click', () => {
     return;
   }
   const color = selected.rasoio.color;
-  selected.stand = { id: color === 'nero' ? 'STAND_NERO_ID' : 'STAND_ARGENTO_ID' };
+  selected.stand = { id: color === 'nero' ? '49984888996178' : '49984889028946' };
   document.getElementById('add-stand-btn').classList.add('selected');
   document.getElementById('skip-stand-btn').classList.remove('selected');
   goToNextStep(3);
@@ -2586,6 +2586,38 @@ document.querySelectorAll('.lamette-btn').forEach(btn => {
   });
 });
 
+/* ---- COMPLETA ACQUISTO ---- */
+document.getElementById('complete-purchase').addEventListener('click', async () => {
+  if (!selected.rasoio || !selected.lamette) {
+    alert("Completa tutti i passaggi per procedere all'acquisto.");
+    return;
+  }
+
+  // Raccogli i dettagli degli articoli da aggiungere al carrello
+  const items = [
+    { id: selected.rasoio.id, quantity: 1 },
+    selected.stand ? { id: selected.stand.id, quantity: 1 } : null,
+    { id: selected.lamette.id, quantity: 1 }
+  ].filter(Boolean);
+
+  try {
+    // Aggiungi articoli al carrello
+    for (const item of items) {
+      await fetch('/cart/add.js', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ items: [item] })
+      });
+    }
+
+    // Reindirizza al checkout
+    window.location.href = '/checkout';
+  } catch (error) {
+    console.error('Errore durante l\'aggiunta al carrello:', error);
+    alert("Si è verificato un errore durante l'aggiunta al carrello. Riprova.");
+  }
+});
+
 /* ---- UPDATE PROGRESS BAR ---- */
 function updateProgressBar() {
   const steps = [
@@ -2601,6 +2633,13 @@ function updateProgressBar() {
     } else {
       progressStep.classList.remove('active');
     }
+  });
+}
+
+/* ---- NAVIGAZIONE AUTOMATICA ---- */
+function goToNextStep(stepNumber) {
+  document.querySelectorAll('.funnel-step-container').forEach((container, index) => {
+    container.classList.toggle('active', index + 1 === stepNumber);
   });
 }
 </script></div></div>
