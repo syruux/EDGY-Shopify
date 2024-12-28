@@ -2391,7 +2391,7 @@
   margin-bottom: 1.5rem;
   background: linear-gradient(90deg, #001233, #fd5001);
   padding: 1.5rem;
-  border-radius: 0;
+  border-radius: 2px;
   color: white;
 }
 .funnel-header h2 {
@@ -2568,6 +2568,27 @@ function isStepAccessible(stepNumber) {
   if (stepNumber === 3) return !!selected.stand || selected.stand === null;
   return false;
 }
+
+/* ---- COMPLETA ACQUISTO ---- */
+document.getElementById('complete-purchase').addEventListener('click', () => {
+  // Controlla che tutte le selezioni siano state effettuate
+  if (!selected.rasoio || !selected.lamette) {
+    alert("Completa tutti i passaggi per procedere all'acquisto.");
+    return;
+  }
+
+  // Raccogli i dettagli dell'ordine
+  const orderDetails = {
+    rasoio: selected.rasoio,
+    stand: selected.stand,
+    lamette: selected.lamette
+  };
+
+  // Simula il completamento dell'acquisto (puoi sostituire con una chiamata API)
+  console.log("Dati dell'ordine:", orderDetails);
+  alert("Acquisto completato con successo! Grazie per aver scelto EDGY.");
+});
+
 </script></div></div>
   
     </div>
