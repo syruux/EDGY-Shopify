@@ -1901,7 +1901,7 @@
     <div
       enableLazyloadImage="true" parentTag="Col"
         class="g2VTEbYEo4 "
-        style="--ta:left;--mb:4px;--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--op:100%"
+        style="--ta:left;--mb:10px;--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--op:100%"
       >
       <div class="gp-flex" style="--jc:left">
         <div
@@ -2332,6 +2332,13 @@
     <p>Seleziona i tuoi preferiti per creare il bundle perfetto.</p>
   </div>
 
+  <!-- Progress Indicator -->
+  <div class="progress-bar">
+    <div class="progress-step" id="progress-step-1"></div>
+    <div class="progress-step" id="progress-step-2"></div>
+    <div class="progress-step" id="progress-step-3"></div>
+  </div>
+
   <!-- STEP 1: SCEGLI RASOIO -->
   <div class="funnel-step-container" id="step1-container">
     <div class="funnel-step-header" data-step="1">
@@ -2391,7 +2398,7 @@
   margin-bottom: 1.5rem;
   background: linear-gradient(90deg, #001233, #fd5001);
   padding: 1.5rem;
-  border-radius: 2px;
+  border-radius: 8px;
   color: white;
 }
 .funnel-header h2 {
@@ -2402,6 +2409,25 @@
 .funnel-header p {
   margin: 0.5rem 0 0;
   font-size: 1rem;
+}
+
+/* Progress Bar */
+.progress-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.progress-step {
+  flex: 1;
+  height: 5px;
+  background-color: #ddd;
+  position: relative;
+  margin: 0 5px;
+  border-radius: 10px;
+}
+.progress-step.active {
+  background-color: #fd5001;
 }
 
 /* SEZIONI DEL FUNNEL */
@@ -2507,6 +2533,8 @@ document.querySelectorAll('.funnel-step-header').forEach(header => {
     if (!isActive) {
       stepContainer.classList.add('active');
     }
+
+    updateProgressBar();
   });
 });
 
@@ -2517,6 +2545,7 @@ document.querySelectorAll('.rasoio-btn').forEach(btn => {
     document.querySelectorAll('.rasoio-btn').forEach(b => b.classList.remove('selected'));
     btn.classList.add('selected');
     goToNextStep(2);
+    updateProgressBar();
   });
 });
 
@@ -2527,10 +2556,11 @@ document.getElementById('add-stand-btn').addEventListener('click', () => {
     return;
   }
   const color = selected.rasoio.color;
-  selected.stand = { id: color === 'nero' ? '49984888996178' : '49984889028946' };
+  selected.stand = { id: color === 'nero' ? 'STAND_NERO_ID' : 'STAND_ARGENTO_ID' };
   document.getElementById('add-stand-btn').classList.add('selected');
   document.getElementById('skip-stand-btn').classList.remove('selected');
   goToNextStep(3);
+  updateProgressBar();
 });
 
 document.getElementById('skip-stand-btn').addEventListener('click', () => {
@@ -2542,6 +2572,7 @@ document.getElementById('skip-stand-btn').addEventListener('click', () => {
   document.getElementById('skip-stand-btn').classList.add('selected');
   document.getElementById('add-stand-btn').classList.remove('selected');
   goToNextStep(3);
+  updateProgressBar();
 });
 
 /* ---- STEP 3: LAMETTE ---- */
@@ -2551,22 +2582,26 @@ document.querySelectorAll('.lamette-btn').forEach(btn => {
     document.querySelectorAll('.lamette-btn').forEach(b => b.classList.remove('selected'));
     btn.classList.add('selected');
     document.getElementById('complete-purchase').removeAttribute('disabled');
+    updateProgressBar();
   });
 });
 
-/* ---- NAVIGAZIONE AUTOMATICA ---- */
-function goToNextStep(stepNumber) {
-  document.querySelectorAll('.funnel-step-container').forEach(container => {
-    const currentStep = parseInt(container.querySelector('.funnel-step-header').dataset.step);
-    container.classList.toggle('active', currentStep === stepNumber);
-  });
-}
+/* ---- UPDATE PROGRESS BAR ---- */
+function updateProgressBar() {
+  const steps = [
+    selected.rasoio !== null,
+    selected.stand !== null || selected.stand === null,
+    selected.lamette !== null
+  ];
 
-function isStepAccessible(stepNumber) {
-  if (stepNumber === 1) return true;
-  if (stepNumber === 2) return !!selected.rasoio;
-  if (stepNumber === 3) return !!selected.stand || selected.stand === null;
-  return false;
+  steps.forEach((step, index) => {
+    const progressStep = document.getElementById(`progress-step-${index + 1}`);
+    if (step) {
+      progressStep.classList.add('active');
+    } else {
+      progressStep.classList.remove('active');
+    }
+  });
 }
 
 /* ---- COMPLETA ACQUISTO ---- */
