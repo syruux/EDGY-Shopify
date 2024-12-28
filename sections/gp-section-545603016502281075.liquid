@@ -2603,40 +2603,6 @@ function updateProgressBar() {
     }
   });
 }
-
-/* ---- COMPLETA ACQUISTO ---- */
-document.getElementById('complete-purchase').addEventListener('click', async () => {
-  if (!selected.rasoio || !selected.lamette) {
-    alert("Completa tutti i passaggi per procedere all'acquisto.");
-    return;
-  }
-
-  // Verifica e raccogli i dettagli degli articoli da aggiungere al carrello
-  const items = [
-    { id: selected.rasoio.id, quantity: 1 },
-    selected.stand ? { id: selected.stand.id, quantity: 1 } : null,
-    { id: selected.lamette.id, quantity: 1 }
-  ].filter(Boolean);
-
-  try {
-    // Aggiungi articoli al carrello uno alla volta
-    for (const item of items) {
-      await fetch('/cart/add.js', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ items: [item] })
-      });
-    }
-
-    // Conferma aggiunta e reindirizza al checkout
-    console.log("Tutti i prodotti sono stati aggiunti al carrello:", items);
-    window.location.href = '/checkout';
-  } catch (error) {
-    console.error('Errore durante l\'aggiunta al carrello:', error);
-    alert("Si è verificato un errore durante l'aggiunta al carrello. Riprova.");
-  }
-});
-
 </script></div></div>
   
     </div>
