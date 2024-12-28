@@ -2347,17 +2347,25 @@
     <div class="funnel-step-content">
       <div class="options-row">
         <div class="option-btn rasoio-btn" data-variant-id="49941997977938" data-color="nero">
-          <img src="{{ nero.image }}" alt="Rasoio Nero" class="product-image">
+          <div class="product-image-container">
+            <img src="{{ nero.image | default: '/assets/placeholder.png' }}" alt="Rasoio Nero" class="product-image">
+          </div>
           <div class="product-info">
             <span class="product-title">Nero</span>
-            <span class="product-price"><s>{{ nero.original_price }}</s> {{ nero.discounted_price }}</span>
+            <span class="product-price">
+              <s>{{ nero.original_price | default: '€49.99' }}</s> {{ nero.discounted_price | default: '€39.99' }}
+            </span>
           </div>
         </div>
         <div class="option-btn rasoio-btn" data-variant-id="49941998010706" data-color="argento">
-          <img src="{{ argento.image }}" alt="Rasoio Argento" class="product-image">
+          <div class="product-image-container">
+            <img src="{{ argento.image | default: '/assets/placeholder.png' }}" alt="Rasoio Argento" class="product-image">
+          </div>
           <div class="product-info">
             <span class="product-title">Argento</span>
-            <span class="product-price"><s>{{ argento.original_price }}</s> {{ argento.discounted_price }}</span>
+            <span class="product-price">
+              <s>{{ argento.original_price | default: '€49.99' }}</s> {{ argento.discounted_price | default: '€39.99' }}
+            </span>
           </div>
         </div>
       </div>
@@ -2372,10 +2380,14 @@
     <div class="funnel-step-content">
       <div class="options-row">
         <div id="add-stand-btn" class="option-btn">
-          <img src="{{ stand.image }}" alt="Stand" class="product-image">
+          <div class="product-image-container">
+            <img src="{{ stand.image | default: '/assets/placeholder.png' }}" alt="Stand" class="product-image">
+          </div>
           <div class="product-info">
             <span class="product-title">Sì, lo voglio</span>
-            <span class="product-price"><s>{{ stand.original_price }}</s> {{ stand.discounted_price }}</span>
+            <span class="product-price">
+              <s>{{ stand.original_price | default: '€29.99' }}</s> {{ stand.discounted_price | default: '€19.99' }}
+            </span>
           </div>
         </div>
         <div id="skip-stand-btn" class="option-btn">
@@ -2395,17 +2407,25 @@
     <div class="funnel-step-content">
       <div class="options-row">
         <div class="option-btn lamette-btn" data-variant-id="49988803494226">
-          <img src="{{ lamette10.image }}" alt="Pack da 10 Lamette" class="product-image">
+          <div class="product-image-container">
+            <img src="{{ lamette10.image | default: '/assets/placeholder.png' }}" alt="Pack da 10 Lamette" class="product-image">
+          </div>
           <div class="product-info">
             <span class="product-title">Pack da 10</span>
-            <span class="product-price"><s>{{ lamette10.original_price }}</s> {{ lamette10.discounted_price }}</span>
+            <span class="product-price">
+              <s>{{ lamette10.original_price | default: '€14.99' }}</s> {{ lamette10.discounted_price | default: '€9.99' }}
+            </span>
           </div>
         </div>
         <div class="option-btn lamette-btn" data-variant-id="49988803526994">
-          <img src="{{ lamette100.image }}" alt="Pack da 100 Lamette" class="product-image">
+          <div class="product-image-container">
+            <img src="{{ lamette100.image | default: '/assets/placeholder.png' }}" alt="Pack da 100 Lamette" class="product-image">
+          </div>
           <div class="product-info">
             <span class="product-title">Pack da 100</span>
-            <span class="product-price"><s>{{ lamette100.original_price }}</s> {{ lamette100.discounted_price }}</span>
+            <span class="product-price">
+              <s>{{ lamette100.original_price | default: '€99.99' }}</s> {{ lamette100.discounted_price | default: '€59.99' }}
+            </span>
           </div>
         </div>
       </div>
@@ -2418,7 +2438,7 @@
 </div>
 
 <style>
-/* CONTENITORE PRINCIPALE */
+/* GENERALE */
 #funnel-section {
   max-width: 600px;
   margin: 0 auto;
@@ -2502,25 +2522,22 @@
 
 /* BOTTONI OPZIONE */
 .option-btn {
-  border: 2px solid #001233;
+  border: 1px solid #001233;
   background-color: #fff;
   color: #001233;
   padding: 1rem;
   cursor: pointer;
   transition: all 0.3s;
-  border-radius: 0;
+  border-radius: 4px;
   font-size: 1rem;
-  text-align: center;
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: 1rem;
-  justify-content: flex-start;
 }
 .option-btn:hover {
   background-color: #fd5001;
   color: #fff;
-  transform: scale(1.02);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 .option-btn.selected {
@@ -2528,19 +2545,22 @@
   color: #fff;
 }
 
+.product-image-container {
+  flex-shrink: 0;
+  width: 60px;
+}
 .product-image {
-  width: 80px;
+  width: 100%;
   height: auto;
-  border-radius: 0;
+  border-radius: 4px;
 }
 .product-info {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
 }
 .product-title {
   font-weight: bold;
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
 .product-price {
   font-size: 0.9rem;
@@ -2556,7 +2576,7 @@
   background-color: #001233;
   color: white;
   padding: 1rem;
-  border-radius: 8px;
+  border-radius: 4px;
   text-align: center;
   font-size: 1.2rem;
   margin-top: 1rem;
