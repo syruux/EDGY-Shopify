@@ -1,3 +1,13 @@
+
+@font-face {
+  font-family: 'NomeFontPersonalizzato';
+  src: url('assets/engebrechtre_bd-webfont.woff2') format('woff2'),
+       url('assets/engebrechtre_bd_it-webfont.woff2') format('woff2'),
+       url('assets/engebrechtre_ex_bd-webfont.woff2') format('woff2'),
+       url('assets/engebrechtre_ex_it-webfont.woff2') format('woff2'),
+       url('assets/engebrechtre_rg_it-webfont.woff2') format('woff2');
+}
+
 *, :before, :after {
   box-sizing: border-box;
   border-style: solid;
@@ -18,7 +28,8 @@ body {
   --text-color: var(--text-primary);
   background: rgb(var(--background));
   color: rgb(var(--text-color));
-  font: var(--text-font-style) var(--text-font-weight) var(--text-base) / 1.6 var(--text-font-family);
+  font-family: 'Engebrechtre', sans-serif;
+  font: var(--text-font-style) var(--text-font-weight) var(--text-base) / 1.6;
   letter-spacing: var(--text-letter-spacing);
   margin: 0;
   position: relative;
