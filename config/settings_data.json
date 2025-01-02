@@ -153,5 +153,10 @@
       "product_color_display": "swatch",
       "product_info_alignment": "center"
     }
+  },
+  "platform_customizations": {
+    "custom_css": [
+      "h1,h2,h3,h4,h5,h6 {font-family: \"Engebrechtre\", serif;}"
+    ]
   }
 }
