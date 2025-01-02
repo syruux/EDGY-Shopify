@@ -1,11 +1,11 @@
 
 @font-face {
   font-family: 'Engebrechtre';
-  src: url('assets/engebrechtre_bd-webfont.woff2') format('woff2'),
-       url('assets/engebrechtre_bd_it-webfont.woff2') format('woff2'),
-       url('assets/engebrechtre_ex_bd-webfont.woff2') format('woff2'),
-       url('assets/engebrechtre_ex_it-webfont.woff2') format('woff2'),
-       url('assets/engebrechtre_rg_it-webfont.woff2') format('woff2');
+  src: url('engebrechtre_bd-webfont.woff2') format('woff2'),
+       url('engebrechtre_bd_it-webfont.woff2') format('woff2'),
+       url('engebrechtre_ex_bd-webfont.woff2') format('woff2'),
+       url('aengebechtre_ex_it-webfont.woff2') format('woff2'),
+       url('engebrechtre_rg_it-webfont.woff2') format('woff2');
 }
 
 *, :before, :after {
