@@ -28,8 +28,7 @@ body {
   --text-color: var(--text-primary);
   background: rgb(var(--background));
   color: rgb(var(--text-color));
-  font-family: 'Engebrechtre', sans-serif;
-  font: var(--text-font-style) var(--text-font-weight) var(--text-base) / 1.6;
+  font: var(--text-font-style) var(--text-font-weight) var(--text-base) / 1.6 var(--text-font-family);
   letter-spacing: var(--text-letter-spacing);
   margin: 0;
   position: relative;
@@ -44,6 +43,7 @@ hr {
 h1, h2, h3, h4, h5, h6 {
   font-size: inherit;
   font-weight: inherit;
+  font-family: 'Engebrechtre', sans-serif;
 }
 
 a {
