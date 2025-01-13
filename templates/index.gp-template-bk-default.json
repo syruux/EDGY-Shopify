@@ -13,7 +13,7 @@
       "type": "gp-section-549061624296637517",
       "settings": {
         "section_preload": "true",
-        "checksum": "9086cfec4c86e6b905aea93047e59b6c760f887068f23cdc819d2f80478241a1_1_1"
+        "checksum": "cd80ad45f6698a7b02a902ad77966bcbf67aa2576cbd4a9e5cdc447211d25046_1_1"
       }
     },
     "slideshow": {
@@ -68,6 +68,7 @@
         "slide-1",
         "slide-2"
       ],
+      "disabled": true,
       "settings": {
         "full_width": true,
         "allow_transparent_header": false,
