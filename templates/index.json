@@ -9,14 +9,21 @@
  */
 {
   "sections": {
+    "gp_shopify_original_section_549061624296637517": {
+      "type": "gp-section-549061624296637517",
+      "settings": {
+        "section_preload": "true",
+        "checksum": "9086cfec4c86e6b905aea93047e59b6c760f887068f23cdc819d2f80478241a1_1_1"
+      }
+    },
     "slideshow": {
       "type": "slideshow",
       "blocks": {
         "slide-1": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/EDGY_NERO_FOAM_HERO_DEF-Photoroom.jpg",
-            "mobile_image": "shopify://shop_images/mobile_black_hero_v1-Photoroom.jpg",
+            "image": "shopify:\/\/shop_images\/EDGY_NERO_FOAM_HERO_DEF-Photoroom.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/mobile_black_hero_v1-Photoroom.jpg",
             "content_max_width": 780,
             "mobile_text_position": "place-self-center text-center",
             "desktop_text_position": "sm:place-self-center sm:text-center",
@@ -24,7 +31,7 @@
             "title": "Slide title",
             "heading_tag": "h0",
             "button_text": "Scopri di più",
-            "button_link": "shopify://products/rasoio-di-sicurezza-edgy",
+            "button_link": "shopify:\/\/products\/rasoio-di-sicurezza-edgy",
             "text_color": "#ffffff",
             "button_background": "{{ shop.brand.colors.secondary[0].foreground }}",
             "button_text_color": "{{ shop.brand.colors.primary[0].foreground }}",
@@ -37,8 +44,8 @@
         "slide-2": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/EDGY_ARGENTO_FOAM_HERO_DEF_copy_-Photoroom_1.jpg",
-            "mobile_image": "shopify://shop_images/mobile_hero_silver-Photoroom.jpg",
+            "image": "shopify:\/\/shop_images\/EDGY_ARGENTO_FOAM_HERO_DEF_copy_-Photoroom_1.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/mobile_hero_silver-Photoroom.jpg",
             "content_max_width": 780,
             "mobile_text_position": "place-self-center text-center",
             "desktop_text_position": "sm:place-self-center sm:text-center",
@@ -46,7 +53,7 @@
             "title": "Slide title",
             "heading_tag": "h0",
             "button_text": "Scopri di più",
-            "button_link": "shopify://products/rasoio-di-sicurezza-edgy",
+            "button_link": "shopify:\/\/products\/rasoio-di-sicurezza-edgy",
             "text_color": "#ffffff",
             "button_background": "{{ shop.brand.colors.secondary[0].foreground }}",
             "button_text_color": "{{ shop.brand.colors.primary[0].foreground }}",
@@ -321,7 +328,7 @@
         "1664424230c4756b0e-2": {
           "type": "richtext",
           "settings": {
-            "content": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
+            "content": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.<\/p>"
           }
         }
       },
@@ -450,8 +457,8 @@
       "settings": {
         "full_width": true,
         "subheading": "",
-        "title": "Before/after",
-        "content": "<p>Showcase your product benefit by using before/after image comparison.</p>",
+        "title": "Before\/after",
+        "content": "<p>Showcase your product benefit by using before\/after image comparison.<\/p>",
         "expand_image": false,
         "text_position": "center",
         "before_after_text_position": "bottom",
@@ -519,7 +526,7 @@
             "vertical_position_mobile": 70,
             "icon_width": 32,
             "title": "Feature name",
-            "content": "<p>Share useful information about your product features.</p>"
+            "content": "<p>Share useful information about your product features.<\/p>"
           }
         },
         "1664424434f5b7d0e0-1": {
@@ -531,7 +538,7 @@
             "vertical_position_mobile": 14,
             "icon_width": 32,
             "title": "Feature name",
-            "content": "<p>Share useful information about your product features.</p>"
+            "content": "<p>Share useful information about your product features.<\/p>"
           }
         },
         "1664424434f5b7d0e0-2": {
@@ -543,7 +550,7 @@
             "vertical_position_mobile": 75,
             "icon_width": 32,
             "title": "Feature name",
-            "content": "<p>Share useful information about your product features.</p>"
+            "content": "<p>Share useful information about your product features.<\/p>"
           }
         }
       },
@@ -583,7 +590,7 @@
             "image_rotation_degrees": -2,
             "subheading": "",
             "title": "Heading 1",
-            "content": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>",
+            "content": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.<\/p>",
             "button_url": "",
             "button_text": ""
           }
@@ -594,7 +601,7 @@
             "image_rotation_degrees": 1.5,
             "subheading": "",
             "title": "Heading 2",
-            "content": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>",
+            "content": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.<\/p>",
             "button_url": "",
             "button_text": ""
           }
@@ -742,10 +749,10 @@
           "type": "values",
           "settings": {
             "product": "",
-            "value_1": "<p>Yes</p>",
-            "value_2": "<p>Yes</p>",
-            "value_3": "<p>No</p>",
-            "value_4": "<p>No</p>",
+            "value_1": "<p>Yes<\/p>",
+            "value_2": "<p>Yes<\/p>",
+            "value_3": "<p>No<\/p>",
+            "value_4": "<p>No<\/p>",
             "value_5": "",
             "value_6": "",
             "value_7": "",
@@ -770,10 +777,10 @@
           "type": "values",
           "settings": {
             "product": "",
-            "value_1": "<p>No</p>",
-            "value_2": "<p>Yes</p>",
-            "value_3": "<p>Yes</p>",
-            "value_4": "<p>No</p>",
+            "value_1": "<p>No<\/p>",
+            "value_2": "<p>Yes<\/p>",
+            "value_3": "<p>Yes<\/p>",
+            "value_4": "<p>No<\/p>",
             "value_5": "",
             "value_6": "",
             "value_7": "",
@@ -804,7 +811,7 @@
         "full_width": true,
         "subheading": "Compare",
         "title": "Product specification",
-        "content": "<p>Give your customers useful information about your products and showcase differences between them.</p>",
+        "content": "<p>Give your customers useful information about your products and showcase differences between them.<\/p>",
         "button_text": "",
         "button_url": "",
         "text_position": "start",
@@ -833,21 +840,21 @@
           "type": "item",
           "settings": {
             "title": "Do you ship overseas?",
-            "content": "<p>Yes, we ship all over the world. Shipping costs will apply, and will be added at checkout. We run discounts and promotions all year, so stay tuned for exclusive deals.</p>"
+            "content": "<p>Yes, we ship all over the world. Shipping costs will apply, and will be added at checkout. We run discounts and promotions all year, so stay tuned for exclusive deals.<\/p>"
           }
         },
         "166442457738b23caf-1": {
           "type": "item",
           "settings": {
             "title": "How long will it take to get my orders?",
-            "content": "<p>It depends on where you are. Orders processed here will take 5-7 business days to arrive. Overseas deliveries can take anywhere from 7-16 days. Delivery details will be provided in your confirmation email.</p>"
+            "content": "<p>It depends on where you are. Orders processed here will take 5-7 business days to arrive. Overseas deliveries can take anywhere from 7-16 days. Delivery details will be provided in your confirmation email.<\/p>"
           }
         },
         "166442457738b23caf-2": {
           "type": "item",
           "settings": {
             "title": "Any question?",
-            "content": "<p>You can contact us through our contact page! We will be happy to assist you.</p>"
+            "content": "<p>You can contact us through our contact page! We will be happy to assist you.<\/p>"
           }
         }
       },
@@ -860,7 +867,7 @@
         "full_width": false,
         "subheading": "",
         "title": "FAQ",
-        "content": "<p>Use this text to share information about your product or shipping policies.</p>",
+        "content": "<p>Use this text to share information about your product or shipping policies.<\/p>",
         "team_avatar_width": 160,
         "support_hours": "Our customer support is available Monday to Friday: 8am-8:30pm.",
         "answer_time": "Average answer time: 24h",
@@ -880,6 +887,7 @@
     }
   },
   "order": [
+    "gp_shopify_original_section_549061624296637517",
     "slideshow",
     "image-link-blocks",
     "scrolling-text",
