@@ -17,7 +17,7 @@
         "message": {
           "type": "message",
           "settings": {
-            "text": "Announce something here",
+            "text": "",
             "url": ""
           }
         }
@@ -28,7 +28,7 @@
       "settings": {
         "enable_sticky": false,
         "text_size": "text-base",
-        "navigation_mode": "scrolling",
+        "navigation_mode": "arrows",
         "scrolling_speed": 10,
         "background": "{{ shop.brand.colors.primary[0].background }}",
         "background_gradient": "linear-gradient(0deg, rgba(255, 255, 255, 1) 1%, rgba(246, 177, 172, 1) 53%)",
