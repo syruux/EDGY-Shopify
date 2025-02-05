@@ -28,21 +28,6 @@
         "ggHpgnKSgcw_label": "<p><span style=\"font-size:20px;\">PROVALO SUBITO</span></p>"
       }
     },
-    "scrolling-text": {
-      "type": "scrolling-text",
-      "settings": {
-        "full_width": true,
-        "text": "Promotion text",
-        "text_size": "large",
-        "text_style": "fill",
-        "scrolling_mode": "auto",
-        "scrolling_speed": 5,
-        "background": "",
-        "background_gradient": "",
-        "text_color": "",
-        "text_gradient": ""
-      }
-    },
     "impact-text": {
       "type": "impact-text",
       "blocks": {
@@ -379,7 +364,6 @@
   "order": [
     "gp_shopify_original_section_549086981380899618",
     "gp_shopify_original_section_549061624296637517",
-    "scrolling-text",
     "impact-text",
     "before-after-image",
     "press",
