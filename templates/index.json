@@ -13,19 +13,19 @@
       "type": "gp-section-549086981380899618",
       "settings": {
         "section_preload": "true",
-        "checksum": "1c65ca0c609dc2c921e2487864b4f4bd6e409736ca855b927059f482d35a91ce_1_1",
-        "ggj24uexWOc_text": "<p>4.7 / 5  |  Visi puliti</p>",
-        "ggHFuOVUbYE_text": "Scopri il rasoio con cui le donne<br>riaccendono il proprio <span style=\"color:#FFFFFF;font-size:22px;\"><strong>viso</strong></span>.",
-        "gg18FL_QnGg_label": "<p>PROVALO SUBITO</p>"
+        "checksum": "176026d68ce0afa2fb8da5ffc08cc364c56cce347f7fbfe93461522c577df1ca_1_1"
       }
     },
     "gp_shopify_original_section_549061624296637517": {
       "type": "gp-section-549061624296637517",
       "settings": {
-        "section_preload": "false",
-        "checksum": "a713bd4b4a5af3e0c712fbc8a2933b0f7c8d635de67a31b5f963e4cc3193d8f4_1_1",
-        "gg8dFpxlySe_text": "Scopri il rasoio con cui le donne <br>si radono il <span style=\"color:#F6B1AC;\">viso</span>.",
-        "ggHpgnKSgcw_label": "<p><span style=\"font-size:20px;\">PROVALO SUBITO</span></p>"
+        "checksum": "be46da633347020c0893f3a9464d2c8f6ab8dd0c59d98b518c50403a35b8b9b8_1_1"
+      }
+    },
+    "gp_shopify_original_section_552394413137986329": {
+      "type": "gp-section-552394413137986329",
+      "settings": {
+        "checksum": "736a5e0eb4e285e111a679a4c53d4815161cc20e8f95a8860e7b26437c2d0853_1_1"
       }
     },
     "impact-text": {
@@ -137,7 +137,7 @@
             "vertical_position_mobile": 70,
             "icon_width": 32,
             "title": "Feature name",
-            "content": "<p>Share useful information about your product features.</p>"
+            "content": "<p>Share useful information about your product features.<\/p>"
           }
         },
         "1664424434f5b7d0e0-1": {
@@ -149,7 +149,7 @@
             "vertical_position_mobile": 14,
             "icon_width": 32,
             "title": "Feature name",
-            "content": "<p>Share useful information about your product features.</p>"
+            "content": "<p>Share useful information about your product features.<\/p>"
           }
         },
         "1664424434f5b7d0e0-2": {
@@ -161,7 +161,7 @@
             "vertical_position_mobile": 75,
             "icon_width": 32,
             "title": "Feature name",
-            "content": "<p>Share useful information about your product features.</p>"
+            "content": "<p>Share useful information about your product features.<\/p>"
           }
         }
       },
@@ -224,10 +224,10 @@
           "type": "values",
           "settings": {
             "product": "",
-            "value_1": "<p>Yes</p>",
-            "value_2": "<p>Yes</p>",
-            "value_3": "<p>No</p>",
-            "value_4": "<p>No</p>",
+            "value_1": "<p>Yes<\/p>",
+            "value_2": "<p>Yes<\/p>",
+            "value_3": "<p>No<\/p>",
+            "value_4": "<p>No<\/p>",
             "value_5": "",
             "value_6": "",
             "value_7": "",
@@ -252,10 +252,10 @@
           "type": "values",
           "settings": {
             "product": "",
-            "value_1": "<p>No</p>",
-            "value_2": "<p>Yes</p>",
-            "value_3": "<p>Yes</p>",
-            "value_4": "<p>No</p>",
+            "value_1": "<p>No<\/p>",
+            "value_2": "<p>Yes<\/p>",
+            "value_3": "<p>Yes<\/p>",
+            "value_4": "<p>No<\/p>",
             "value_5": "",
             "value_6": "",
             "value_7": "",
@@ -286,7 +286,7 @@
         "full_width": true,
         "subheading": "Compare",
         "title": "Product specification",
-        "content": "<p>Give your customers useful information about your products and showcase differences between them.</p>",
+        "content": "<p>Give your customers useful information about your products and showcase differences between them.<\/p>",
         "button_text": "",
         "button_url": "",
         "text_position": "start",
@@ -315,21 +315,21 @@
           "type": "item",
           "settings": {
             "title": "Do you ship overseas?",
-            "content": "<p>Yes, we ship all over the world. Shipping costs will apply, and will be added at checkout. We run discounts and promotions all year, so stay tuned for exclusive deals.</p>"
+            "content": "<p>Yes, we ship all over the world. Shipping costs will apply, and will be added at checkout. We run discounts and promotions all year, so stay tuned for exclusive deals.<\/p>"
           }
         },
         "166442457738b23caf-1": {
           "type": "item",
           "settings": {
             "title": "How long will it take to get my orders?",
-            "content": "<p>It depends on where you are. Orders processed here will take 5-7 business days to arrive. Overseas deliveries can take anywhere from 7-16 days. Delivery details will be provided in your confirmation email.</p>"
+            "content": "<p>It depends on where you are. Orders processed here will take 5-7 business days to arrive. Overseas deliveries can take anywhere from 7-16 days. Delivery details will be provided in your confirmation email.<\/p>"
           }
         },
         "166442457738b23caf-2": {
           "type": "item",
           "settings": {
             "title": "Any question?",
-            "content": "<p>You can contact us through our contact page! We will be happy to assist you.</p>"
+            "content": "<p>You can contact us through our contact page! We will be happy to assist you.<\/p>"
           }
         }
       },
@@ -342,7 +342,7 @@
         "full_width": false,
         "subheading": "",
         "title": "FAQ",
-        "content": "<p>Use this text to share information about your product or shipping policies.</p>",
+        "content": "<p>Use this text to share information about your product or shipping policies.<\/p>",
         "team_avatar_width": 160,
         "support_hours": "Our customer support is available Monday to Friday: 8am-8:30pm.",
         "answer_time": "Average answer time: 24h",
@@ -364,6 +364,7 @@
   "order": [
     "gp_shopify_original_section_549086981380899618",
     "gp_shopify_original_section_549061624296637517",
+    "gp_shopify_original_section_552394413137986329",
     "impact-text",
     "before-after-image",
     "press",
