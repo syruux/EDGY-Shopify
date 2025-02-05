@@ -13,128 +13,49 @@
       "type": "gp-section-549086981380899618",
       "settings": {
         "section_preload": "true",
-        "checksum": "176026d68ce0afa2fb8da5ffc08cc364c56cce347f7fbfe93461522c577df1ca_1_1"
+        "checksum": "176026d68ce0afa2fb8da5ffc08cc364c56cce347f7fbfe93461522c577df1ca_1_1",
+        "ggj24uexWOc_text": "<p>4.7 / 5  |  Visi puliti</p>",
+        "ggHFuOVUbYE_text": "Scopri il rasoio con cui le donne<br>riaccendono il proprio <span style=\"color:#FFFFFF;font-size:22px;\"><strong>viso</strong></span>.",
+        "gg18FL_QnGg_label": "<p>PROVALO SUBITO</p>"
       }
     },
     "gp_shopify_original_section_549061624296637517": {
       "type": "gp-section-549061624296637517",
       "settings": {
-        "checksum": "0a0534505d13a538338a85acf8ccdbd803fbcc2bcc93f7d28e3a5d9ba8683ee9_1_1"
+        "section_preload": "false",
+        "checksum": "0a0534505d13a538338a85acf8ccdbd803fbcc2bcc93f7d28e3a5d9ba8683ee9_1_1",
+        "gg8dFpxlySe_text": "Scopri il METODO con cui le donne <br>si radono il <span style=\"color:#F6B1AC;\">viso</span>.",
+        "ggHpgnKSgcw_label": "<p><span style=\"font-size:20px;\">PROVALO SUBITO</span></p>"
       }
     },
     "gp_shopify_original_section_552394413137986329": {
       "type": "gp-section-552394413137986329",
       "settings": {
-        "checksum": "6d9c2d7a101ff951f4fa8f466fb90d29529255acac0eb59ac3949ebeb04aa888_1_1"
+        "section_preload": "false",
+        "checksum": "6d9c2d7a101ff951f4fa8f466fb90d29529255acac0eb59ac3949ebeb04aa888_1_1",
+        "gghg71p8FMQ_text": "LA routine perfetta",
+        "ggsEA9Jc2Lb_text": "<p>Da quando abbiamo lanciato <strong>EDGY </strong>il nostro focus è stato creare il sistema di Dermaplaning perfetto!</p><p>Con il nostro kit non dovrai più preoccuparti di quei peli facciali poco estetici, il tuo viso è pronto per un <span style=\"color:#424242;\"><strong>GLOW</strong></span><strong> UP</strong>!</p>",
+        "ggoXA4eZk0Q_label": "<p><span style=\"font-size:16px;\">PROVALO SUBITO</span></p>",
+        "gg0T9-yQN4x_text": "StudiatA per il tuo viso",
+        "ggx66By_UrG_text": "<p>Lo spray <strong>EDGY </strong>identifica ogni pelo, anche quelli che non vedi con lo specchio per il makeup. </p><p>Bastano pochi spruzzi, qualche passata di rasoio et voilà, splendi come non mai! </p>",
+        "ggyyf99S2xf_label": "<p><span style=\"font-size:16px;\">PROVALO SUBITO</span></p>",
+        "gg2kV2VTgHU_text": "fatti da parte, marco.<br>è il turno di edgy.",
+        "ggsJ9QgNezs_text": "<p>La rasatura del viso non è solo per gli uomini, e no, non ti crescerà la barba! È un rituale di bellezza che illumina la pelle e aiuta il makeup a stendersi meglio. </p><p><strong>EDGY</strong> è qui per sfatare i miti e svelarti i benefici di una pelle più liscia che mai.</p>"
       }
     },
     "gp_shopify_original_section_552417653927445634": {
       "type": "gp-section-552417653927445634",
       "settings": {
-        "checksum": "65da3acd4ba81d46ed5396db5da3a142213eefe5dfe7f6680723c1ae1dc7479d_1_1"
+        "section_preload": "false",
+        "checksum": "65da3acd4ba81d46ed5396db5da3a142213eefe5dfe7f6680723c1ae1dc7479d_1_1",
+        "ggycplRaLlQ_text": "oltre 1000+ donne soddisfatte"
       }
     },
     "gp_shopify_original_section_552417654195880759": {
       "type": "gp-section-552417654195880759",
       "settings": {
+        "section_preload": "false",
         "checksum": "c7806e8dac1a8b66803d18512a1acf316e3029e4c1be5db339f3ecb94af20009_1_1"
-      }
-    },
-    "impact-text": {
-      "type": "impact-text",
-      "blocks": {
-        "1664424181b38582d5-0": {
-          "type": "item",
-          "settings": {
-            "title": "100%",
-            "subheading": "Showcase a benefit of your product",
-            "content": "",
-            "button_text": "",
-            "button_url": "",
-            "animate_impact_text": false,
-            "animate_impact_text_duration": 2
-          }
-        }
-      },
-      "block_order": [
-        "1664424181b38582d5-0"
-      ],
-      "settings": {
-        "full_width": true,
-        "stack_mobile": true,
-        "text_alignment": "center",
-        "impact_text_style": "fill",
-        "text_divider": "none",
-        "impact_text_size_ratio": 1,
-        "background": "",
-        "background_gradient": "",
-        "heading_text_color": "",
-        "heading_gradient": "linear-gradient(180deg, rgba(26, 26, 26, 0.2), rgba(26, 26, 26, 0) 100%)",
-        "text_color": "",
-        "button_background": "",
-        "button_text_color": ""
-      }
-    },
-    "before-after-image": {
-      "type": "before-after-image",
-      "settings": {
-        "full_width": true,
-        "subheading": "",
-        "title": "Riaccendi la pelle del tuo viso",
-        "content": "",
-        "expand_image": false,
-        "text_position": "center",
-        "before_after_text_position": "bottom",
-        "before_text": "Before",
-        "after_text": "After",
-        "drag_initial_position": 50,
-        "background": "",
-        "background_gradient": "",
-        "text_color": "",
-        "before_text_color": "#ffffff",
-        "after_text_color": "#ffffff",
-        "drag_cursor_background": "#ffffff",
-        "drag_cursor_color": "#000000"
-      }
-    },
-    "press": {
-      "type": "press",
-      "blocks": {
-        "16644243327ba53d2a-0": {
-          "type": "quote",
-          "settings": {
-            "logo_width": 100,
-            "author": "",
-            "content": "Share info about what your customers say about your products.",
-            "show_rating": false,
-            "rating": 4
-          }
-        },
-        "16644243327ba53d2a-1": {
-          "type": "quote",
-          "settings": {
-            "logo_width": 100,
-            "author": "",
-            "content": "Or share content about your promotion, offers...",
-            "show_rating": false,
-            "rating": 4
-          }
-        }
-      },
-      "block_order": [
-        "16644243327ba53d2a-0",
-        "16644243327ba53d2a-1"
-      ],
-      "settings": {
-        "full_width": true,
-        "content_size": "medium",
-        "background": "",
-        "background_gradient": "",
-        "text_color": "",
-        "heading_color": "",
-        "heading_gradient": "",
-        "logo_item_background": "",
-        "logo_item_border": ""
       }
     },
     "hot-spots": {
@@ -149,7 +70,7 @@
             "vertical_position_mobile": 70,
             "icon_width": 32,
             "title": "Feature name",
-            "content": "<p>Share useful information about your product features.<\/p>"
+            "content": "<p>Share useful information about your product features.</p>"
           }
         },
         "1664424434f5b7d0e0-1": {
@@ -161,7 +82,7 @@
             "vertical_position_mobile": 14,
             "icon_width": 32,
             "title": "Feature name",
-            "content": "<p>Share useful information about your product features.<\/p>"
+            "content": "<p>Share useful information about your product features.</p>"
           }
         },
         "1664424434f5b7d0e0-2": {
@@ -173,7 +94,7 @@
             "vertical_position_mobile": 75,
             "icon_width": 32,
             "title": "Feature name",
-            "content": "<p>Share useful information about your product features.<\/p>"
+            "content": "<p>Share useful information about your product features.</p>"
           }
         }
       },
@@ -204,122 +125,6 @@
         "hot_spot_content_blur_radius": 3
       }
     },
-    "feature-chart": {
-      "type": "feature-chart",
-      "blocks": {
-        "16644246508f6fa13a-0": {
-          "type": "headings",
-          "settings": {
-            "heading_1": "Heading 1",
-            "heading_2": "Heading 2",
-            "heading_3": "Heading 3",
-            "heading_4": "Heading 4",
-            "heading_5": "",
-            "heading_6": "",
-            "heading_7": "",
-            "heading_8": "",
-            "heading_9": "",
-            "heading_10": "",
-            "heading_11": "",
-            "heading_12": "",
-            "heading_13": "",
-            "heading_14": "",
-            "heading_15": "",
-            "heading_16": "",
-            "heading_17": "",
-            "heading_18": "",
-            "heading_19": "",
-            "heading_20": ""
-          }
-        },
-        "16644246508f6fa13a-1": {
-          "type": "values",
-          "settings": {
-            "product": "",
-            "value_1": "<p>Yes<\/p>",
-            "value_2": "<p>Yes<\/p>",
-            "value_3": "<p>No<\/p>",
-            "value_4": "<p>No<\/p>",
-            "value_5": "",
-            "value_6": "",
-            "value_7": "",
-            "value_8": "",
-            "value_9": "",
-            "value_10": "",
-            "value_11": "",
-            "value_12": "",
-            "value_13": "",
-            "value_14": "",
-            "value_15": "",
-            "value_16": "",
-            "value_17": "",
-            "value_18": "",
-            "value_19": "",
-            "value_20": "",
-            "view_button_background": "",
-            "view_button_text_color": ""
-          }
-        },
-        "16644246508f6fa13a-2": {
-          "type": "values",
-          "settings": {
-            "product": "",
-            "value_1": "<p>No<\/p>",
-            "value_2": "<p>Yes<\/p>",
-            "value_3": "<p>Yes<\/p>",
-            "value_4": "<p>No<\/p>",
-            "value_5": "",
-            "value_6": "",
-            "value_7": "",
-            "value_8": "",
-            "value_9": "",
-            "value_10": "",
-            "value_11": "",
-            "value_12": "",
-            "value_13": "",
-            "value_14": "",
-            "value_15": "",
-            "value_16": "",
-            "value_17": "",
-            "value_18": "",
-            "value_19": "",
-            "value_20": "",
-            "view_button_background": "",
-            "view_button_text_color": ""
-          }
-        }
-      },
-      "block_order": [
-        "16644246508f6fa13a-0",
-        "16644246508f6fa13a-1",
-        "16644246508f6fa13a-2"
-      ],
-      "settings": {
-        "full_width": true,
-        "subheading": "Compare",
-        "title": "Product specification",
-        "content": "<p>Give your customers useful information about your products and showcase differences between them.<\/p>",
-        "button_text": "",
-        "button_url": "",
-        "text_position": "start",
-        "max_rows": 5,
-        "view_all_text": "View all",
-        "view_less_text": "View less",
-        "view_product": "View",
-        "viewing_product": "",
-        "show_product_swatch": true,
-        "background": "",
-        "background_gradient": "",
-        "text_color": "",
-        "heading_color": "",
-        "heading_gradient": "",
-        "button_background": "",
-        "button_text_color": "",
-        "chart_background": "",
-        "chart_text_color": "",
-        "chart_true_false_color": ""
-      }
-    },
     "faq": {
       "type": "faq",
       "blocks": {
@@ -327,21 +132,21 @@
           "type": "item",
           "settings": {
             "title": "Do you ship overseas?",
-            "content": "<p>Yes, we ship all over the world. Shipping costs will apply, and will be added at checkout. We run discounts and promotions all year, so stay tuned for exclusive deals.<\/p>"
+            "content": "<p>Yes, we ship all over the world. Shipping costs will apply, and will be added at checkout. We run discounts and promotions all year, so stay tuned for exclusive deals.</p>"
           }
         },
         "166442457738b23caf-1": {
           "type": "item",
           "settings": {
             "title": "How long will it take to get my orders?",
-            "content": "<p>It depends on where you are. Orders processed here will take 5-7 business days to arrive. Overseas deliveries can take anywhere from 7-16 days. Delivery details will be provided in your confirmation email.<\/p>"
+            "content": "<p>It depends on where you are. Orders processed here will take 5-7 business days to arrive. Overseas deliveries can take anywhere from 7-16 days. Delivery details will be provided in your confirmation email.</p>"
           }
         },
         "166442457738b23caf-2": {
           "type": "item",
           "settings": {
             "title": "Any question?",
-            "content": "<p>You can contact us through our contact page! We will be happy to assist you.<\/p>"
+            "content": "<p>You can contact us through our contact page! We will be happy to assist you.</p>"
           }
         }
       },
@@ -354,7 +159,7 @@
         "full_width": false,
         "subheading": "",
         "title": "FAQ",
-        "content": "<p>Use this text to share information about your product or shipping policies.<\/p>",
+        "content": "<p>Use this text to share information about your product or shipping policies.</p>",
         "team_avatar_width": 160,
         "support_hours": "Our customer support is available Monday to Friday: 8am-8:30pm.",
         "answer_time": "Average answer time: 24h",
@@ -379,11 +184,7 @@
     "gp_shopify_original_section_552394413137986329",
     "gp_shopify_original_section_552417653927445634",
     "gp_shopify_original_section_552417654195880759",
-    "impact-text",
-    "before-after-image",
-    "press",
     "hot-spots",
-    "feature-chart",
     "faq"
   ]
 }
