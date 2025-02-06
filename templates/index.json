@@ -13,49 +13,31 @@
       "type": "gp-section-549086981380899618",
       "settings": {
         "section_preload": "true",
-        "checksum": "176026d68ce0afa2fb8da5ffc08cc364c56cce347f7fbfe93461522c577df1ca_1_1",
-        "ggj24uexWOc_text": "<p>4.7 / 5  |  Visi puliti</p>",
-        "ggHFuOVUbYE_text": "Scopri il rasoio con cui le donne<br>riaccendono il proprio <span style=\"color:#FFFFFF;font-size:22px;\"><strong>viso</strong></span>.",
-        "gg18FL_QnGg_label": "<p>PROVALO SUBITO</p>"
+        "checksum": "176026d68ce0afa2fb8da5ffc08cc364c56cce347f7fbfe93461522c577df1ca_1_1"
       }
     },
     "gp_shopify_original_section_549061624296637517": {
       "type": "gp-section-549061624296637517",
       "settings": {
-        "section_preload": "false",
-        "checksum": "0a0534505d13a538338a85acf8ccdbd803fbcc2bcc93f7d28e3a5d9ba8683ee9_1_1",
-        "gg8dFpxlySe_text": "Scopri il METODO con cui le donne <br>si radono il <span style=\"color:#F6B1AC;\">viso</span>.",
-        "ggHpgnKSgcw_label": "<p><span style=\"font-size:20px;\">PROVALO SUBITO</span></p>"
+        "checksum": "0a0534505d13a538338a85acf8ccdbd803fbcc2bcc93f7d28e3a5d9ba8683ee9_1_1"
       }
     },
     "gp_shopify_original_section_552394413137986329": {
       "type": "gp-section-552394413137986329",
       "settings": {
-        "section_preload": "false",
-        "checksum": "6d9c2d7a101ff951f4fa8f466fb90d29529255acac0eb59ac3949ebeb04aa888_1_1",
-        "gghg71p8FMQ_text": "LA routine perfetta",
-        "ggsEA9Jc2Lb_text": "<p>Da quando abbiamo lanciato <strong>EDGY </strong>il nostro focus è stato creare il sistema di Dermaplaning perfetto!</p><p>Con il nostro kit non dovrai più preoccuparti di quei peli facciali poco estetici, il tuo viso è pronto per un <span style=\"color:#424242;\"><strong>GLOW</strong></span><strong> UP</strong>!</p>",
-        "ggoXA4eZk0Q_label": "<p><span style=\"font-size:16px;\">PROVALO SUBITO</span></p>",
-        "gg0T9-yQN4x_text": "StudiatA per il tuo viso",
-        "ggx66By_UrG_text": "<p>Lo spray <strong>EDGY </strong>identifica ogni pelo, anche quelli che non vedi con lo specchio per il makeup. </p><p>Bastano pochi spruzzi, qualche passata di rasoio et voilà, splendi come non mai! </p>",
-        "ggyyf99S2xf_label": "<p><span style=\"font-size:16px;\">PROVALO SUBITO</span></p>",
-        "gg2kV2VTgHU_text": "fatti da parte, marco.<br>è il turno di edgy.",
-        "ggsJ9QgNezs_text": "<p>La rasatura del viso non è solo per gli uomini, e no, non ti crescerà la barba! È un rituale di bellezza che illumina la pelle e aiuta il makeup a stendersi meglio. </p><p><strong>EDGY</strong> è qui per sfatare i miti e svelarti i benefici di una pelle più liscia che mai.</p>"
+        "checksum": "961a1557de6c0b1f001a12e696f25b64284695981dc287cb3ea9f54d2d52a784_1_1"
       }
     },
     "gp_shopify_original_section_552417653927445634": {
       "type": "gp-section-552417653927445634",
       "settings": {
-        "section_preload": "false",
-        "checksum": "65da3acd4ba81d46ed5396db5da3a142213eefe5dfe7f6680723c1ae1dc7479d_1_1",
-        "ggycplRaLlQ_text": "oltre 1000+ donne soddisfatte"
+        "checksum": "65da3acd4ba81d46ed5396db5da3a142213eefe5dfe7f6680723c1ae1dc7479d_1_1"
       }
     },
     "gp_shopify_original_section_552417654195880759": {
       "type": "gp-section-552417654195880759",
       "settings": {
-        "section_preload": "false",
-        "checksum": "c7806e8dac1a8b66803d18512a1acf316e3029e4c1be5db339f3ecb94af20009_1_1"
+        "checksum": "d0d6110875971e4387e70b1895d4110156ab5ac6ad0320c3b3fb29547869ab57_1_1"
       }
     },
     "hot-spots": {
@@ -70,7 +52,7 @@
             "vertical_position_mobile": 70,
             "icon_width": 32,
             "title": "Feature name",
-            "content": "<p>Share useful information about your product features.</p>"
+            "content": "<p>Share useful information about your product features.<\/p>"
           }
         },
         "1664424434f5b7d0e0-1": {
@@ -82,7 +64,7 @@
             "vertical_position_mobile": 14,
             "icon_width": 32,
             "title": "Feature name",
-            "content": "<p>Share useful information about your product features.</p>"
+            "content": "<p>Share useful information about your product features.<\/p>"
           }
         },
         "1664424434f5b7d0e0-2": {
@@ -94,7 +76,7 @@
             "vertical_position_mobile": 75,
             "icon_width": 32,
             "title": "Feature name",
-            "content": "<p>Share useful information about your product features.</p>"
+            "content": "<p>Share useful information about your product features.<\/p>"
           }
         }
       },
@@ -132,21 +114,21 @@
           "type": "item",
           "settings": {
             "title": "Do you ship overseas?",
-            "content": "<p>Yes, we ship all over the world. Shipping costs will apply, and will be added at checkout. We run discounts and promotions all year, so stay tuned for exclusive deals.</p>"
+            "content": "<p>Yes, we ship all over the world. Shipping costs will apply, and will be added at checkout. We run discounts and promotions all year, so stay tuned for exclusive deals.<\/p>"
           }
         },
         "166442457738b23caf-1": {
           "type": "item",
           "settings": {
             "title": "How long will it take to get my orders?",
-            "content": "<p>It depends on where you are. Orders processed here will take 5-7 business days to arrive. Overseas deliveries can take anywhere from 7-16 days. Delivery details will be provided in your confirmation email.</p>"
+            "content": "<p>It depends on where you are. Orders processed here will take 5-7 business days to arrive. Overseas deliveries can take anywhere from 7-16 days. Delivery details will be provided in your confirmation email.<\/p>"
           }
         },
         "166442457738b23caf-2": {
           "type": "item",
           "settings": {
             "title": "Any question?",
-            "content": "<p>You can contact us through our contact page! We will be happy to assist you.</p>"
+            "content": "<p>You can contact us through our contact page! We will be happy to assist you.<\/p>"
           }
         }
       },
@@ -159,7 +141,7 @@
         "full_width": false,
         "subheading": "",
         "title": "FAQ",
-        "content": "<p>Use this text to share information about your product or shipping policies.</p>",
+        "content": "<p>Use this text to share information about your product or shipping policies.<\/p>",
         "team_avatar_width": 160,
         "support_hours": "Our customer support is available Monday to Friday: 8am-8:30pm.",
         "answer_time": "Average answer time: 24h",
