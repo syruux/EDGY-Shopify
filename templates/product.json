@@ -9,35 +9,29 @@
  */
 {
   "sections": {
+    "gp_shopify_original_section_553992300909298581": {
+      "type": "gp-section-553992300909298581",
+      "settings": {
+        "section_preload": "true",
+        "checksum": "4ceedb074d34a4456b8370dc81ac8afc1e92c0e93803c8082caa7c01622b4322_1_1"
+      }
+    },
     "gp_shopify_original_section_545603016502281075": {
       "type": "gp-section-545603016502281075",
       "settings": {
-        "section_preload": "true",
-        "checksum": "8b69f920328d6827768ff3ae23e5b679f6f14995443e406373b2c0e661045b25_1_1",
-        "ggKBhR6F_8W_text": "<strong>Spray</strong> Identificatore di Peli e <strong>Rasoi</strong> per il Tuo <strong>Dermaplaning</strong>",
-        "gg4HRppEV86_text": "Il Kit per il viso più <span style=\"color:#F6B1AC;\">edgy</span>.",
-        "ggv5scqmZVm_text": "<p>+ 4500 Volti Soddisfatti </p>",
-        "gg1-XPu0DBp_text": "<p>Identifica ogni dettaglio</p>",
-        "ggwTfwqzhSP_text": "<p>Pelle liscia e morbida</p>",
-        "ggUNvxqoJxq_text": "<p>Rimuove qualsiasi pelo</p>",
-        "gggw5UsVog-_text": "<p>Applica meglio il makeup</p>",
-        "ggYwWqh_uOq_childItem_0": "<p>Cosa è incluso?</p>",
-        "ggYwWqh_uOq_childItem_1": "<p>I miei peli ricresceranno più scuri e spessi dopo l'utilizzo?</p>",
-        "ggYwWqh_uOq_childItem_2": "<p> I miei peli ricresceranno più velocemente?</p>",
-        "ggYwWqh_uOq_childItem_3": "<p>Posso utilizzare lo spray anche se ho l'acne?</p>",
-        "ggSRtXI_kkQ_text": "<p>Sblocca il potere della tecnologia avanzata in ogni spruzzo: precisione assoluta, nessun pelo dimenticato.</p>",
-        "ggD9-QxY7dJ_childItem_0": "<p>Svela ogni dettaglio: Metti in luce ogni contorno del viso e individua anche i peli più sottili per una rasatura impeccabile.</p>",
-        "ggD9-QxY7dJ_childItem_1": "<p>Amore per la tua pelle: Arricchito con estratti botanici, migliora la visibilità e si prende cura della tua pelle allo stesso tempo.</p>",
-        "ggD9-QxY7dJ_childItem_2": "<p>Scorrimento setoso e protettivo: Forma una barriera fresca e levigante che riduce l’attrito e gli strappi, per un’esperienza ultra delicata.</p>",
-        "ggD9-QxY7dJ_childItem_3": "<p>Ultra delicato: Creato per coccolare la tua pelle: non comedogenico, senza solfati, parabeni, ftalati e formaldeide.</p>",
-        "ggD9-QxY7dJ_childItem_4": "<p>Formula brevettata e testata: Approvato dai dermatologi, adatto a tutti i tipi di pelle e di pelo.</p>"
+        "checksum": "8b69f920328d6827768ff3ae23e5b679f6f14995443e406373b2c0e661045b25_1_1"
       }
     },
     "gp_shopify_original_section_553985433172706499": {
       "type": "gp-section-553985433172706499",
       "settings": {
-        "section_preload": "false",
-        "checksum": "801d4589ea48439c5902454c91aa9ba228a4091090ad664f6d8277d44a4116aa_1_1"
+        "checksum": "f1474b706ca6effd5f6966c6d789708bf8ef41050794f580942b2fbea7873424_1_1"
+      }
+    },
+    "gp_shopify_original_section_553992300540199829": {
+      "type": "gp-section-553992300540199829",
+      "settings": {
+        "checksum": "ccc28d63619c373ec89f0022f2e823345552461fc630da212fffbf6a3b574d70_1_1"
       }
     },
     "main": {
@@ -63,8 +57,10 @@
     }
   },
   "order": [
+    "gp_shopify_original_section_553992300909298581",
     "gp_shopify_original_section_545603016502281075",
     "gp_shopify_original_section_553985433172706499",
+    "gp_shopify_original_section_553992300540199829",
     "main"
   ]
 }

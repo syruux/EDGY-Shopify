@@ -9,101 +9,33 @@
  */
 {
   "sections": {
+    "gp_shopify_original_section_553992300909298581": {
+      "type": "gp-section-553992300909298581",
+      "settings": {
+        "section_preload": "true",
+        "checksum": "4ceedb074d34a4456b8370dc81ac8afc1e92c0e93803c8082caa7c01622b4322_1_1"
+      }
+    },
     "gp_shopify_original_section_545603016502281075": {
       "type": "gp-section-545603016502281075",
       "settings": {
-        "section_preload": "true",
         "checksum": "8b69f920328d6827768ff3ae23e5b679f6f14995443e406373b2c0e661045b25_1_1"
       }
     },
     "gp_shopify_original_section_553985433172706499": {
       "type": "gp-section-553985433172706499",
       "settings": {
-        "checksum": "801d4589ea48439c5902454c91aa9ba228a4091090ad664f6d8277d44a4116aa_1_1"
+        "checksum": "f1474b706ca6effd5f6966c6d789708bf8ef41050794f580942b2fbea7873424_1_1"
+      }
+    },
+    "gp_shopify_original_section_553992300540199829": {
+      "type": "gp-section-553992300540199829",
+      "settings": {
+        "checksum": "ccc28d63619c373ec89f0022f2e823345552461fc630da212fffbf6a3b574d70_1_1"
       }
     },
     "main": {
       "type": "main-product",
-      "blocks": {
-        "vendor": {
-          "type": "vendor",
-          "settings": {}
-        },
-        "title": {
-          "type": "title",
-          "settings": {
-            "heading_tag": "h2"
-          }
-        },
-        "badges": {
-          "type": "badges",
-          "settings": {}
-        },
-        "price": {
-          "type": "price",
-          "settings": {
-            "show_taxes_notice": false
-          }
-        },
-        "rating": {
-          "type": "rating",
-          "settings": {
-            "show_empty": true
-          }
-        },
-        "payment_terms": {
-          "type": "payment_terms",
-          "settings": {}
-        },
-        "separator": {
-          "type": "separator",
-          "settings": {}
-        },
-        "description": {
-          "type": "description",
-          "settings": {
-            "collapse_content": false
-          }
-        },
-        "variant_picker": {
-          "type": "variant_picker",
-          "settings": {
-            "hide_sold_out_variants": false,
-            "stack_blocks": true,
-            "selector_mode": "dropdown",
-            "color_mode": "variant",
-            "size_chart_page": ""
-          }
-        },
-        "quantity_selector": {
-          "type": "quantity_selector",
-          "settings": {}
-        },
-        "buy_buttons": {
-          "type": "buy_buttons",
-          "settings": {
-            "show_payment_button": true,
-            "show_gift_card_recipient": true,
-            "atc_button_background": "",
-            "atc_button_text_color": "",
-            "payment_button_background": "",
-            "payment_button_text_color": ""
-          }
-        }
-      },
-      "block_order": [
-        "vendor",
-        "title",
-        "badges",
-        "price",
-        "rating",
-        "payment_terms",
-        "separator",
-        "description",
-        "variant_picker",
-        "quantity_selector",
-        "buy_buttons"
-      ],
       "disabled": true,
       "settings": {
         "full_width": true,
@@ -122,34 +54,13 @@
         "input_background": "{{ shop.brand.colors.secondary[0].background }}",
         "input_text_color": "{{ shop.brand.colors.primary[0].background }}"
       }
-    },
-    "related-products": {
-      "type": "related-products",
-      "settings": {
-        "recommendations_count": 6,
-        "products": [],
-        "full_width": true,
-        "stack_products": true,
-        "show_progress_bar": false,
-        "products_per_row_mobile": "1",
-        "products_per_row_desktop": 3,
-        "subheading": "",
-        "title": "You may also like",
-        "content": "",
-        "background": "",
-        "background_gradient": "",
-        "text_color": "",
-        "heading_color": "",
-        "heading_gradient": "",
-        "product_card_background": "",
-        "product_card_text_color": ""
-      }
     }
   },
   "order": [
+    "gp_shopify_original_section_553992300909298581",
     "gp_shopify_original_section_545603016502281075",
     "gp_shopify_original_section_553985433172706499",
-    "main",
-    "related-products"
+    "gp_shopify_original_section_553992300540199829",
+    "main"
   ]
 }
