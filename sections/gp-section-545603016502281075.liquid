@@ -76,7 +76,7 @@
       {%-if variant == empty or variant == null -%}
         {%- assign variant = product.selected_or_first_available_variant -%}
       {%- endif -%}
-      <gp-product data-uid="g3c3hT2PmI" data-id="g3c3hT2PmI"   gp-context='{"productId": {{ product.id }}, "preSelectedOptionIds": [], "isSyncProduct": "true", "variantSelected": {{ variant | json | escape }}, "inventoryQuantity": {{ variant.inventory_quantity }}, "quantity": 1, "formId": "{{ product_form_id }}" }'
+      <gp-product data-uid="g3c3hT2PmI" data-id="g3c3hT2PmI" style="--pos:static;--top:0px"  gp-context='{"productId": {{ product.id }}, "preSelectedOptionIds": [], "isSyncProduct": "true", "variantSelected": {{ variant | json | escape }}, "inventoryQuantity": {{ variant.inventory_quantity }}, "quantity": 1, "formId": "{{ product_form_id }}" }'
         gp-data='{"variantSelected": {{ variant | json | escape }}, "quantity": 1, "productUrl":{{ product.url | json | escape }}, "productHandle":{{ product.handle | json | escape }}, "collectionUrl": {{ collection.url | json | escape }}, "collectionHandle": {{ collection.handle | json | escape }}}'>
         <product-form class="product-form">
           {%- form 'product', product, id: product_form_id, class: 'form contents', data-type: 'add-to-cart-form', autocomplete: 'off'  -%}
@@ -88,7 +88,7 @@
       
     <div
       id="g3c3hT2PmI" data-id="g3c3hT2PmI-row"
-        style="--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--d:grid;--d-mobile:grid;--d-tablet:grid;--op:100%;--op-mobile:100%;--mb:30px;--pt:20px;--pl:0px;--pr:0px;--mb-mobile:14px;--pl-mobile:15px;--pr-mobile:15px;--cg:30px;--pc:start;--gtc:minmax(0, 6fr) minmax(0, 6fr);--gtc-mobile:minmax(0, 12fr);--w:var(--g-ct-w, 1200px);--w-tablet:100%;--w-mobile:100%"
+        style="--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--d:grid;--d-mobile:grid;--d-tablet:grid;--op:100%;--op-mobile:100%;--mb:50px;--pt:40px;--pl:0px;--pr:0px;--mb-mobile:14px;--pl-mobile:15px;--pr-mobile:15px;--pos:static;--top:0px;--cg:30px;--pc:start;--gtc:minmax(0, 6fr) minmax(0, 6fr);--gtc-mobile:minmax(0, 12fr);--w:var(--g-ct-w, 1200px);--w-tablet:100%;--w-mobile:100%"
         class="g3c3hT2PmI gp-mx-auto gp-mb-0 gp-grid gp-max-w-full gp-gap-y-0 gp-transition-colors gp-duration-200 gp-ease-in-out [&_*]:gp-max-w-full"
     >
     {% render 'gp-section-545603016502281075-0', product: product, variant: variant, product_form_id: product_form_id, productSelectedVariant: productSelectedVariant, form: form %}<div
@@ -1398,7 +1398,7 @@
     <gp-icon-list
       uid="gD9-QxY7dJ"
       data-id="gD9-QxY7dJ"
-      gp-data='{"position":{"desktop":"center","tablet":"center","mobile":"center"},"iconWidth":{"desktop":10,"tablet":16,"mobile":16}}'
+      gp-data='{"position":{"desktop":"baseline","tablet":"center","mobile":"center"},"iconWidth":{"desktop":10,"tablet":16,"mobile":16}}'
        style="--pl:0px;--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--op:100%;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll">
      
       <div class="gp-flex" style="--jc:left">
@@ -1408,7 +1408,7 @@
         
            <div
             class="gp-icon-list-wrapper gp-flex gp-child-item-gD9-QxY7dJ"
-            style="--cg:8px;--ai:center;--ai-tablet:center;--ai-mobile:center"
+            style="--cg:8px;--ai:baseline;--ai-tablet:center;--ai-mobile:center"
             data-index="0"
           >
             <div class="gp-icon-list-icon gp-inline-flex gp-shrink-0 gp-overflow-hidden" style="--pl:0px;--pr:var(--g-s-xs);--pt:0px;--pb:0px;--bs:none;--bw:1px 1px 1px 1px;--bc:#000000;--bg:transparent;--pos:relative;--pos-tablet:relative;--pos-mobile:relative;--top:inherit;--top-tablet:inherit;--top-mobile:inherit">
@@ -1426,7 +1426,7 @@
             </div> 
            <div
             class="gp-icon-list-wrapper gp-flex gp-child-item-gD9-QxY7dJ"
-            style="--cg:8px;--ai:center;--ai-tablet:center;--ai-mobile:center"
+            style="--cg:8px;--ai:baseline;--ai-tablet:center;--ai-mobile:center"
             data-index="1"
           >
             <div class="gp-icon-list-icon gp-inline-flex gp-shrink-0 gp-overflow-hidden" style="--pl:0px;--pr:var(--g-s-xs);--pt:0px;--pb:0px;--bs:none;--bw:1px 1px 1px 1px;--bc:#000000;--bg:transparent;--pos:relative;--pos-tablet:relative;--pos-mobile:relative;--top:inherit;--top-tablet:inherit;--top-mobile:inherit">
@@ -1444,7 +1444,7 @@
             </div> 
            <div
             class="gp-icon-list-wrapper gp-flex gp-child-item-gD9-QxY7dJ"
-            style="--cg:8px;--ai:center;--ai-tablet:center;--ai-mobile:center"
+            style="--cg:8px;--ai:baseline;--ai-tablet:center;--ai-mobile:center"
             data-index="2"
           >
             <div class="gp-icon-list-icon gp-inline-flex gp-shrink-0 gp-overflow-hidden" style="--pl:0px;--pr:var(--g-s-xs);--pt:0px;--pb:0px;--bs:none;--bw:1px 1px 1px 1px;--bc:#000000;--bg:transparent;--pos:relative;--pos-tablet:relative;--pos-mobile:relative;--top:inherit;--top-tablet:inherit;--top-mobile:inherit">
@@ -1462,7 +1462,7 @@
             </div> 
            <div
             class="gp-icon-list-wrapper gp-flex gp-child-item-gD9-QxY7dJ"
-            style="--cg:8px;--ai:center;--ai-tablet:center;--ai-mobile:center"
+            style="--cg:8px;--ai:baseline;--ai-tablet:center;--ai-mobile:center"
             data-index="3"
           >
             <div class="gp-icon-list-icon gp-inline-flex gp-shrink-0 gp-overflow-hidden" style="--pl:0px;--pr:var(--g-s-xs);--pt:0px;--pb:0px;--bs:none;--bw:1px 1px 1px 1px;--bc:#000000;--bg:transparent;--pos:relative;--pos-tablet:relative;--pos-mobile:relative;--top:inherit;--top-tablet:inherit;--top-mobile:inherit">
@@ -1480,7 +1480,7 @@
             </div> 
            <div
             class="gp-icon-list-wrapper gp-flex gp-child-item-gD9-QxY7dJ"
-            style="--cg:8px;--ai:center;--ai-tablet:center;--ai-mobile:center"
+            style="--cg:8px;--ai:baseline;--ai-tablet:center;--ai-mobile:center"
             data-index="4"
           >
             <div class="gp-icon-list-icon gp-inline-flex gp-shrink-0 gp-overflow-hidden" style="--pl:0px;--pr:var(--g-s-xs);--pt:0px;--pb:0px;--bs:none;--bw:1px 1px 1px 1px;--bc:#000000;--bg:transparent;--pos:relative;--pos-tablet:relative;--pos-mobile:relative;--top:inherit;--top-tablet:inherit;--top-mobile:inherit">
