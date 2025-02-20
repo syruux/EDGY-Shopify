@@ -16,10 +16,16 @@
         "checksum": "4604bf41633dfdc7fac28fe6786d39011ff50b6a39eafde667c77b2343613818_1_1"
       }
     },
-    "gp_shopify_original_section_553992798286644423": {
-      "type": "gp-section-553992798286644423",
+    "gp_shopify_original_global_section_554145057511310586-1": {
+      "type": "gp-global-section-554145057511310586",
       "settings": {
-        "checksum": "b0f0610cce71797014ef2e01316ad10fa0660da07096f02c9b29d2195479682a_1_1"
+        "section_preload": "false"
+      }
+    },
+    "gp_shopify_original_section_554145208623694708": {
+      "type": "gp-section-554145208623694708",
+      "settings": {
+        "checksum": "f19186fe773d62fd4367a428916cefedebe05e384f940674540e339334e97e6f_1_1"
       }
     },
     "main": {
@@ -46,7 +52,8 @@
   },
   "order": [
     "gp_shopify_original_section_545603016502281075",
-    "gp_shopify_original_section_553992798286644423",
+    "gp_shopify_original_global_section_554145057511310586-1",
+    "gp_shopify_original_section_554145208623694708",
     "main"
   ]
 }
