@@ -78,6 +78,88 @@
   
     </div>
   
+  
+    <div
+      
+      style="--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--op:100%;--mb:40px;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll;--ta:center"
+      data-keep-class="true"
+      class="gX7pYtLnpp "
+    ><div><div class="stats-container">
+  <div class="stat-item">
+    <h2 class="counter" data-target="510399">0</h2>
+    <p>Persone soddisfatte dell'effetto immediato</p>
+  </div>
+  <div class="stat-item">
+    <h2 class="counter" data-target="502837">0</h2>
+    <p>Contorni del viso più definiti, zero dettagli persi</p>
+  </div>
+  <div class="stat-item">
+    <h2 class="counter" data-target="287667">0</h2>
+    <p>Una rasatura rinfrescante e piacevole</p>
+  </div>
+  <div class="stat-item">
+    <h2 class="counter" data-target="398788">0</h2>
+    <p>Perfetto per il dermaplaning, consigliatissimo</p>
+  </div>
+</div></div></div>
+  
+      <style id="custom-css-gX7pYtLnpp">
+        .stats-container {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  padding: 50px 0;
+  background-color: #f8f8f8;
+  border-radius: 10px;
+}
+
+.stat-item {
+  flex: 1;
+  margin: 10px;
+}
+
+.counter {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #333;
+}
+
+      </style>
+    
+      <script id="custom-js-gX7pYtLnpp">
+        try {
+          document.addEventListener("DOMContentLoaded", function () {
+  const counters = document.querySelectorAll(".counter");
+  const options = { threshold: 0.5 };
+  
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        let target = +entry.target.getAttribute("data-target");
+        let count = 0;
+        let step = Math.ceil(target / 100);
+
+        let updateCounter = () => {
+          count += step;
+          if (count >= target) {
+            entry.target.innerText = target.toLocaleString();
+            clearInterval(timer);
+          } else {
+            entry.target.innerText = count.toLocaleString();
+          }
+        };
+
+        let timer = setInterval(updateCounter, 20);
+      }
+    });
+  }, options);
+
+  counters.forEach(counter => observer.observe(counter));
+});
+
+        } catch(err){}
+      </script>
+    
   {% assign locationOrigin = request.origin | append: routes.root_url | split: '/' | join: '/' %}
   <gp-text data-id="g-r7f08EfF">
     <div
