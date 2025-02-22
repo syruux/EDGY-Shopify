@@ -104,24 +104,47 @@
 </div></div></div>
   
       <style id="custom-css-gX7pYtLnpp">
-        .stats-container {
-  display: flex;
-  justify-content: space-around;
+        @import url('https://fonts.googleapis.com/css2?family=Inder&family=Lovelo+Black&display=swap');
+
+.stats-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
   text-align: center;
-  padding: 50px 0;
+  padding: 50px 20px;
   background-color: #f8f8f8;
   border-radius: 10px;
+  max-width: 900px;
+  margin: auto;
 }
 
 .stat-item {
-  flex: 1;
-  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
 }
 
 .counter {
   font-size: 2.5rem;
   font-weight: bold;
+  font-family: "Lovelo Black", sans-serif;
   color: #333;
+}
+
+.stat-item p {
+  font-size: 1.1rem;
+  font-family: "Inder", sans-serif;
+  color: #555;
+  margin-top: 10px;
+}
+
+/* Mobile responsive */
+@media (min-width: 768px) {
+  .stats-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 
       </style>
@@ -131,8 +154,8 @@
           document.addEventListener("DOMContentLoaded", function () {
   const counters = document.querySelectorAll(".counter");
   const options = { threshold: 0.5 };
-  
-  const observer = new IntersectionObserver((entries, observer) => {
+
+  const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         let target = +entry.target.getAttribute("data-target");
