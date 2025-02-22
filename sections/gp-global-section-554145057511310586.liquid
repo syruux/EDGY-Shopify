@@ -86,32 +86,35 @@
       class="gX7pYtLnpp "
     ><div><div class="stats-container">
   <div class="stat-item">
-    <h2 class="counter" data-target="510399">0</h2>
+    <h2 class="counter" data-start="506500" data-target="510399">0</h2>
     <p>Persone soddisfatte dell'effetto immediato</p>
   </div>
   <div class="stat-item">
-    <h2 class="counter" data-target="502837">0</h2>
+    <h2 class="counter" data-start="498000" data-target="502837">0</h2>
     <p>Contorni del viso più definiti, zero dettagli persi</p>
   </div>
   <div class="stat-item">
-    <h2 class="counter" data-target="287667">0</h2>
+    <h2 class="counter" data-start="284000" data-target="287667">0</h2>
     <p>Una rasatura rinfrescante e piacevole</p>
   </div>
   <div class="stat-item">
-    <h2 class="counter" data-target="398788">0</h2>
+    <h2 class="counter" data-start="395000" data-target="398788">0</h2>
     <p>Perfetto per il dermaplaning, consigliatissimo</p>
   </div>
 </div></div></div>
   
       <style id="custom-css-gX7pYtLnpp">
-        .stats-container {
+        @import url('https://fonts.googleapis.com/css2?family=Inder&family=Lovelo+Black&display=swap');
+
+.stats-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
   text-align: center;
-  padding: 20px 20px;
-  background-color: #ffffff;
-  width: 80%;
+  padding: 50px 20px;
+  background-color: #f8f8f8;
+  border-radius: 10px;
+  max-width: 900px;
   margin: auto;
 }
 
@@ -124,15 +127,16 @@
 }
 
 .counter {
-  font-size: 45px;
+  font-size: 2.5rem;
+  font-weight: bold;
   font-family: "Lovelo Black", sans-serif;
-  color: #424242;
+  color: #333;
 }
 
 .stat-item p {
-  font-size: 17px;
+  font-size: 1.1rem;
   font-family: "Inder", sans-serif;
-  color: #424242;
+  color: #555;
   margin-top: 10px;
 }
 
@@ -154,17 +158,18 @@
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
+        let start = +entry.target.getAttribute("data-start"); 
         let target = +entry.target.getAttribute("data-target");
-        let count = 0;
-        let step = Math.ceil(target / 100);
+        let count = start;
+        let step = Math.ceil((target - start) / 100);
 
         let updateCounter = () => {
           count += step;
           if (count >= target) {
-            entry.target.innerText = target.toLocaleString();
+            entry.target.innerText = target.toLocaleString('it-IT') + "+";
             clearInterval(timer);
           } else {
-            entry.target.innerText = count.toLocaleString();
+            entry.target.innerText = count.toLocaleString('it-IT') + "+";
           }
         };
 
