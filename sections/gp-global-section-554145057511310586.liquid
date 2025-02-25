@@ -104,7 +104,7 @@
 </div></div></div>
   
       <style id="custom-css-gX7pYtLnpp">
-        /* Container styles */
+        /* Container styles with increased specificity */
 .stats-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr); /* 2 columns for mobile */
@@ -117,8 +117,8 @@
   font-size: 1rem; /* 16px base for mobile */
 }
 
-/* Stat item */
-.stat-item {
+/* Stat item with increased specificity */
+.stats-container .stat-item {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -126,24 +126,24 @@
   padding: 10px;
 }
 
-/* Counter styles */
-.counter {
-  font-size: 2rem; /* 32px base for mobile */
+/* Counter styles with increased specificity and fallback */
+.stats-container .counter {
+  font-size: 3rem !important; /* 48px for desktop; !important as a last resort */
   font-weight: bold;
-  font-family: "LOVELO BLACK", sans-serif;
+  font-family: "LOVELO BLACK", sans-serif !important; /* Ensure font loads */
   color: #424242;
 }
 
-/* Paragraph text */
-.stat-item p {
-  font-size: 0.875rem; /* 14px base for mobile */
-  font-family: "Inder", sans-serif;
+/* Paragraph text with increased specificity and fallback */
+.stats-container .stat-item p {
+  font-size: 1rem !important; /* 16px for desktop; !important as a last resort */
+  font-family: "Inder", sans-serif !important; /* Ensure font loads */
   color: #424242;
   margin-top: 10px;
   line-height: 1.2;
 }
 
-/* Desktop adjustments */
+/* Desktop adjustments with increased specificity */
 @media (min-width: 768px) {
   .stats-container {
     width: 90%;
@@ -151,24 +151,28 @@
     font-size: 1.125rem; /* 18px for desktop */
   }
   
-  .counter {
-    font-size: 3rem; /* 48px for desktop */
+  .stats-container .counter {
+    font-size: 3rem !important; /* 48px for desktop */
   }
   
-  .stat-item p {
-    font-size: 1rem; /* 16px for desktop */
-    line-height: 1.3;
+  .stats-container .stat-item p {
+    font-size: 1rem !important; /* 16px for desktop */
   }
 }
 
-/* Optional: Smaller screens (below 480px) */
+/* Mobile adjustments for smaller screens */
 @media (max-width: 480px) {
-  .counter {
-    font-size: 1.75rem; /* 28px for very small screens */
+  .stats-container {
+    width: 80%;
+    font-size: 0.875rem; /* 14px for very small screens */
   }
   
-  .stat-item p {
-    font-size: 0.75rem; /* 12px for very small screens */
+  .stats-container .counter {
+    font-size: 2rem !important; /* 32px for very small screens */
+  }
+  
+  .stats-container .stat-item p {
+    font-size: 0.75rem !important; /* 12px for very small screens */
   }
 }
       </style>
