@@ -114,7 +114,7 @@
   background-color: #ffffff;
   width: 80%;
   margin: auto;
-  font-size: 16px !important;
+  font-size: 1.125rem; /* 18px per una migliore leggibilità */
 }
 
 .stat-item {
@@ -126,14 +126,14 @@
 }
 
 .counter {
-  font-size: 2.8em;
+  font-size: 2.8rem; /* 2.8rem = 28px (se il root è 10px) */
   font-weight: bold;
   font-family: "LOVELO BLACK", sans-serif;
   color: #424242;
 }
 
 .stat-item p {
-  font-size: 1em;
+  font-size: 1rem; /* 16px */
   font-family: "Inder", sans-serif;
   color: #424242;
   margin-top: 10px;
@@ -143,18 +143,18 @@
 /* Mobile responsive */
 @media (min-width: 768px) {
   .stats-container {
-      width: 90%;
+    width: 90%;
     grid-template-columns: repeat(4, 1fr);
   }
   
   .counter {
-  font-size: 1.8em;
+    font-size: 3rem; /* 30px per mantenere l'accento sui numeri */
   }
   
   .stat-item p {
-  font-size: 0.95em;
-  margin-top: 10px;
-  line-height: 1.2em;
+    font-size: 1rem;
+    margin-top: 10px;
+    line-height: 1.3em;
   }
 }
 
