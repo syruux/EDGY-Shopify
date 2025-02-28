@@ -39,6 +39,12 @@
       "settings": {
         "checksum": "fee9175a4dbecc3f6c7fcae238c631e0fbcf51cdaedb13c48adac0097e614a45_1_1"
       }
+    },
+    "gp_shopify_original_section_555745604404249377": {
+      "type": "gp-section-555745604404249377",
+      "settings": {
+        "checksum": "7592f2084dd007fd7c50c4a617b511c742bb65cea6389d68141918fbffeced45_1_1"
+      }
     }
   },
   "order": [
@@ -46,6 +52,7 @@
     "gp_shopify_original_section_549061624296637517",
     "gp_shopify_original_section_552394413137986329",
     "gp_shopify_original_section_555739242114843425",
-    "gp_shopify_original_section_552417654195880759"
+    "gp_shopify_original_section_552417654195880759",
+    "gp_shopify_original_section_555745604404249377"
   ]
 }
