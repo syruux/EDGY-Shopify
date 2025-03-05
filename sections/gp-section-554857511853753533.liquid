@@ -378,7 +378,32 @@
     </div>
     <script {% if section.settings.section_preload == "false" %}class="gps-link" delay {% else %}src{% endif %}="https://d2ls1pfffhvy22.cloudfront.net/assets-v2/gp-hero-banner.js?v={{ shop.metafields.GEMPAGES.ASSETS_VERSION }}" defer="defer"></script>
 
+  <div gp-el-wrapper style="--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--op:100%" class="gOV_lwFNGZ ">
+      
+    <script defer strategy="lazyOnload" src="//loox.io/widget/loox.js?shop={{ request.host }}"></script>
+    <div
+      
+      style="--ta:left"
+    >
+      {% if 'reviews_widget' == "rating_widget"  %}
+        {% if 'false' == 'true' %}
+          {% if shop.metafields.loox["global_stats"]  %}
+            {% assign looxstats = shop.metafields.loox["global_stats"] | split: ',' %} 
+            <a href="#looxReviews">
+              <div class="loox-rating" data-rating="{{ looxstats[0] }}" data-raters="{{ looxstats[1] }}"></div>
+            </a>
+          {% endif %}
+        {% else %}
+          <a href="#looxReviews">
+            <div id="looxReviews" data-product-id="{{ product.id }}"></div>
+          </a>
+        {% endif %}
+      {% else %}
+        <div id="looxReviews" data-product-id="{{ product.id }}"></div>
+      {% endif %}
+    </div>
   
+      </div>
     </div>
     </div>
   
