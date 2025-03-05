@@ -2339,7 +2339,21 @@
     </div>
     </div>
    
-    <div gp-el-wrapper style="--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--op:100%;--mb:20px;--mb-mobile:35px" class="gYwWqh_uOq ">
+    <div gp-el-wrapper style="--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--op:100%;--mb:20px" class="gmBVX_oUl2 ">
+      
+    {% assign app_blocks = section.blocks | where: "type", "@app" %}
+    <div
+      class="gp-flex gp-w-full gp-items-center  !gp-block [&_*]:gp-max-w-none"
+      style="--jc:left"
+    >
+      {% for block in app_blocks %}
+        {% if block.type == '@app' and block.id contains 'gp_app_kaching-bundles_gmBVX_oUl2' %}
+          {% render block %}
+        {% endif %}
+      {% endfor %}
+    </div>
+  
+      </div><div gp-el-wrapper style="--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--op:100%;--mb:20px;--mb-mobile:35px" class="gYwWqh_uOq ">
       
     <gp-accordion
       data-id="gYwWqh_uOq"

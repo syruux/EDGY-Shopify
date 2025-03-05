@@ -13,100 +13,42 @@
       "type": "gp-section-545603016502281075",
       "settings": {
         "section_preload": "true",
-        "checksum": "85d008f7fc9f4c03e3960f32fec7d21513f9019ed8a1fa9e94147b1e629beee3_1_1",
-        "ggKBhR6F_8W_text": "<strong>Spray</strong> Identificatore di Peli e <strong>Rasoi</strong> per il Tuo <strong>Dermaplaning</strong>",
-        "gg4HRppEV86_text": "Il Kit per il viso più <span style=\"color:#F6B1AC;\">edgy</span>.",
-        "ggv5scqmZVm_text": "<p>+ 4500 Volti Soddisfatti </p>",
-        "gg1-XPu0DBp_text": "<p>Identifica ogni Dettaglio</p>",
-        "ggwTfwqzhSP_text": "<p>Pelle Liscia e Morbida</p>",
-        "ggUNvxqoJxq_text": "<p>Rimuove qualsiasi Pelo</p>",
-        "gggw5UsVog-_text": "<p>Applica meglio il Makeup</p>",
-        "ggYwWqh_uOq_childItem_0": "<p>Cosa è incluso?</p>",
-        "ggYwWqh_uOq_childItem_1": "<p>I miei peli ricresceranno più scuri e spessi dopo l'utilizzo?</p>",
-        "ggYwWqh_uOq_childItem_2": "<p> I miei peli ricresceranno più velocemente?</p>",
-        "ggYwWqh_uOq_childItem_3": "<p>Posso utilizzare lo spray anche se ho l'acne?</p>",
-        "ggSRtXI_kkQ_text": "<p>Sblocca il potere della tecnologia avanzata in ogni spruzzo: precisione assoluta, nessun pelo dimenticato.</p>",
-        "ggD9-QxY7dJ_childItem_0": "<p><strong>Svela ogni dettaglio:</strong> Metti in luce ogni contorno del viso e individua anche i peli più sottili per una rasatura impeccabile.</p>",
-        "ggD9-QxY7dJ_childItem_1": "<p><strong>Amore per la tua pelle:</strong> Arricchito con estratti botanici, migliora la visibilità e si prende cura della tua pelle allo stesso tempo.</p>",
-        "ggD9-QxY7dJ_childItem_2": "<p><strong>Scorrimento setoso e protettivo:</strong> Forma una barriera fresca e levigante che riduce l’attrito e gli strappi, per un’esperienza ultra delicata.</p>",
-        "ggD9-QxY7dJ_childItem_3": "<p><strong>Ultra delicato:</strong> Creato per coccolare la tua pelle: non comedogenico, senza solfati, parabeni, ftalati e formaldeide.</p>",
-        "ggD9-QxY7dJ_childItem_4": "<p><strong>Formula brevettata e testata:</strong> Approvato dai dermatologi, adatto a tutti i tipi di pelle e di pelo.</p>"
-      }
+        "checksum": "bb8a48544b9cf1075afa49decba19895dee6c270d37b20dc971b783b230243c0_1_1"
+      },
+      "blocks": {
+        "gp_app_kaching-bundles_gmBVX_oUl2": {
+          "type": "shopify:\/\/apps\/kaching-bundles\/blocks\/app-block\/6c637362-a106-4a32-94ac-94dcfd68cdb8",
+          "settings": {
+            "product": "{{ product }}"
+          }
+        }
+      },
+      "block_order": [
+        "gp_app_kaching-bundles_gmBVX_oUl2"
+      ]
     },
     "gp_shopify_original_global_section_554145057511310586-1": {
       "type": "gp-global-section-554145057511310586",
       "settings": {
-        "section_preload": "false",
-        "checksum": ""
+        "section_preload": "false"
       }
     },
     "gp_shopify_original_section_554857511853753533": {
       "type": "gp-section-554857511853753533",
       "settings": {
-        "section_preload": "false",
-        "checksum": "1b4001a0bde3c1c73e747304f744c3c2958973e833887743ea4b15cd451099ba_1_1",
-        "ggo-r4JbfRP_text": "PIù di un semplice spray",
-        "ggoIWZc0o0q_text": "<p>La tua pelle, <span style=\"font-size:28px;\"><i><strong>trasformata</strong></i></span> con ingredienti preziosi e la protezione più sicura.</p>",
-        "ggA4Jr1Q_ad_text": "<strong>Bellezza naturale</strong>",
-        "ggJ9-Y-E1Lh_text": "<p>Estratti botanici ricchi di antiossidanti che coccolano la pelle e la proteggono dai radicali liberi.</p>",
-        "ggl75l1umzG_text": "<strong>Scorrimento effetto seta</strong>",
-        "ggdqv1s4OG1_text": "<p>Una barriera rinfrescante che riduce l’attrito, per una rasatura ultra delicata e senza stress.</p>",
-        "ggbzpzYZJMU_text": "<strong>Gentile sulla pelle, spietato con i peli</strong>",
-        "ggup1nrNNLA_text": "<p>Clinicamente testato, non comedogenico e senza ingredienti aggressivi. Solo sicurezza e glow!</p>"
+        "checksum": "1b4001a0bde3c1c73e747304f744c3c2958973e833887743ea4b15cd451099ba_1_1"
       }
     },
     "gp_shopify_original_section_555288517660377978": {
       "type": "gp-section-555288517660377978",
       "settings": {
-        "section_preload": "false",
-        "checksum": "b24e908872f0e839d8384ce0acc2bd2d3044566d5b22f7995b7a8c6ca7e099e5_1_1",
-        "ggcRFXaoXAc_text": "PIù di un semplice spray",
-        "gg-2c2tr617_text": "<p>La tua pelle, <span style=\"font-size:25px;\"><i><strong>trasformata</strong></i></span> con ingredienti preziosi e la protezione più sicura.</p>",
-        "ggLAyLrI3c0_text": "<strong>Bellezza naturale</strong>",
-        "gglgvqSTq4t_text": "<p>Estratti botanici ricchi di antiossidanti che coccolano la pelle e la proteggono dai radicali liberi.</p>",
-        "ggNQB7CmRk3_text": "<strong>Scorrimento effetto seta</strong>",
-        "ggKvxwJzM9Y_text": "<p>Una barriera rinfrescante che riduce l’attrito, per una rasatura ultra delicata e senza stress.</p>",
-        "gg5Mkvqetsk_text": "<strong>Gentile sulla pelle, spietato con i peli</strong>",
-        "gg8UpPBz1FH_text": "<p>Clinicamente testato, non comedogenico e senza ingredienti aggressivi. Solo sicurezza e glow!</p>"
-      }
-    },
-    "1741206157bec98059": {
-      "type": "apps",
-      "blocks": {
-        "loox_reviews_loox_dynamic_section_LBfARV": {
-          "type": "shopify://apps/loox-reviews/blocks/loox-dynamic-section/5c3b337f-fd14-4df5-b1d6-80ec13e6e28e",
-          "settings": {
-            "only_photos": false,
-            "aggregated": false,
-            "limit": 15,
-            "hide_thumbnails": false,
-            "maxwidth": 1080,
-            "is_sample": false
-          }
-        }
-      },
-      "block_order": [
-        "loox_reviews_loox_dynamic_section_LBfARV"
-      ],
-      "settings": {
-        "full_width": true,
-        "remove_vertical_spacing": false,
-        "remove_horizontal_spacing": false,
-        "background": "",
-        "background_gradient": "",
-        "text_color": "",
-        "enable_review_integration": true,
-        "review_header_gradient": "linear-gradient(135deg, rgba(255, 194, 102, 1), rgba(255, 163, 26, 1) 100%)",
-        "review_header_text_color": "#000000",
-        "review_button_background": "#000000",
-        "review_button_text_color": "#ffffff"
+        "checksum": "b24e908872f0e839d8384ce0acc2bd2d3044566d5b22f7995b7a8c6ca7e099e5_1_1"
       }
     },
     "gp_shopify_original_global_section_556294514596119745-2": {
       "type": "gp-global-section-556294514596119745",
       "settings": {
-        "section_preload": "false",
-        "checksum": ""
+        "section_preload": "false"
       }
     },
     "main": {
@@ -136,7 +78,6 @@
     "gp_shopify_original_global_section_554145057511310586-1",
     "gp_shopify_original_section_554857511853753533",
     "gp_shopify_original_section_555288517660377978",
-    "1741206157bec98059",
     "gp_shopify_original_global_section_556294514596119745-2",
     "main"
   ]
