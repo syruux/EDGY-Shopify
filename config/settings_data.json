@@ -45,6 +45,7 @@
     "cart_icon": "shopping_basket",
     "cart_show_free_shipping_threshold": true,
     "cart_free_shipping_threshold": 49.9,
+    "favicon": "shopify://shop_images/Senza_titolo_180_x_180_px.png",
     "checkout_accent_color": "#f0c417",
     "checkout_button_color": "#1a1a1a",
     "content_for_index": [],
