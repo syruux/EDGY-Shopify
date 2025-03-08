@@ -166,6 +166,8 @@
     }
   },
   "platform_customizations": {
-    "custom_css": []
+    "custom_css": [
+      ".kaching-bundles__block-title {font-family: 'Lovelo Black' !important!;}"
+    ]
   }
 }
