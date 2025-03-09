@@ -47,17 +47,8 @@
     },
     "gp_shopify_original_section_556463946660316196": {
       "type": "gp-section-556463946660316196",
-      "blocks": {
-        "gp_app_loox-reviews_gOV_lwFNGZ": {
-          "type": "shopify:\/\/apps\/loox-reviews\/blocks\/loox-dynamic-section\/5c3b337f-fd14-4df5-b1d6-80ec13e6e28e",
-          "settings": {}
-        }
-      },
-      "block_order": [
-        "gp_app_loox-reviews_gOV_lwFNGZ"
-      ],
       "settings": {
-        "checksum": "b59e8fae567983857021c60c1991eb02e2e21108f302e9b3c9b34e2baad87d9f_1_1"
+        "checksum": "50242d7528413d7e2395be89c333364ae824b73611b2066c77ea70316adc16dc_1_1"
       }
     },
     "gp_shopify_original_global_section_556294514596119745-2": {
