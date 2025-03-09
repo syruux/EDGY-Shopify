@@ -12617,10 +12617,14 @@ split-lines {
   font-family: "Inder" !important;
 }
 
-kaching-bundles__bar-label {
+.kaching-bundles__bar-label {
   font-family: "Inder" !important;
 }
 
-kaching-bundles__free-gift__text {
+.kaching-bundles__free-gift__text {
+  font-family: "Lovelo Black" !important;
+}
+
+.kaching-bundles__bar-most-popular__content {
   font-family: "Lovelo Black" !important;
 }
