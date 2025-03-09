@@ -12612,3 +12612,15 @@ split-lines {
 .kaching-bundles__block-title {
   font-family: "Lovelo Black" !important;
 }
+
+.kaching-bundles__bar-subtitle {
+  font-family: "Inder" !important;
+}
+
+kaching-bundles__bar-label {
+  font-family: "Inder" !important;
+}
+
+kaching-bundles__free-gift__text {
+  font-family: "Lovelo Black" !important;
+}
