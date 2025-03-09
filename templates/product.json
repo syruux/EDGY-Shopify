@@ -49,7 +49,7 @@
       "type": "gp-section-556463946660316196",
       "blocks": {
         "gp_app_loox-reviews_gOV_lwFNGZ": {
-          "type": "shopify:\/\/apps\/loox-reviews\/blocks\/loox-card-carousel-section\/5c3b337f-fd14-4df5-b1d6-80ec13e6e28e",
+          "type": "shopify:\/\/apps\/loox-reviews\/blocks\/loox-dynamic-section\/5c3b337f-fd14-4df5-b1d6-80ec13e6e28e",
           "settings": {}
         }
       },
@@ -57,7 +57,7 @@
         "gp_app_loox-reviews_gOV_lwFNGZ"
       ],
       "settings": {
-        "checksum": "d12952f7f3d787f10ba60e38bedbd05273c1fe95bd53308f253d67eea6b58149_1_1"
+        "checksum": "cc198a3dfb72f55c3320a15ad87b0037e88c1a5aecc2f723540595099181f5a5_1_1"
       }
     },
     "gp_shopify_original_global_section_556294514596119745-2": {
