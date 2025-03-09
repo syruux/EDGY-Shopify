@@ -11,6 +11,10 @@
   "sections": {
     "gp_shopify_original_section_545603016502281075": {
       "type": "gp-section-545603016502281075",
+      "settings": {
+        "section_preload": "true",
+        "checksum": "46134a55f3dfbd19f288344f5e6e295789899f6d1d3dd87f91c761ce911dbcf3_1_1"
+      },
       "blocks": {
         "gp_app_kaching-bundles_gmBVX_oUl2": {
           "type": "shopify:\/\/apps\/kaching-bundles\/blocks\/app-block\/6c637362-a106-4a32-94ac-94dcfd68cdb8",
@@ -21,11 +25,7 @@
       },
       "block_order": [
         "gp_app_kaching-bundles_gmBVX_oUl2"
-      ],
-      "settings": {
-        "section_preload": "true",
-        "checksum": "46134a55f3dfbd19f288344f5e6e295789899f6d1d3dd87f91c761ce911dbcf3_1_1"
-      }
+      ]
     },
     "gp_shopify_original_global_section_554145057511310586-1": {
       "type": "gp-global-section-554145057511310586",
@@ -48,7 +48,7 @@
     "gp_shopify_original_section_556463946660316196": {
       "type": "gp-section-556463946660316196",
       "settings": {
-        "checksum": "50242d7528413d7e2395be89c333364ae824b73611b2066c77ea70316adc16dc_1_1"
+        "checksum": "c327b59f3e500e94ddd167ff9f7eb79ec7f8f4f52d528c14cb38597c9118f0dd_1_1"
       }
     },
     "gp_shopify_original_global_section_556294514596119745-2": {
