@@ -12627,4 +12627,6 @@ split-lines {
 
 .kaching-bundles__bar-most-popular__content {
   font-family: "Inder" !important;
+  font-size: 14px;
+  font-weight: bold;
 }
