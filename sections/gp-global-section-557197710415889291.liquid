@@ -1,0 +1,169 @@
+
+{% render 'gp-head', 'isThemeSection: true' %}
+<style {% if section.settings.section_preload == "false" %} class="gps-link gps-style" type="text/disabled-css" {% endif %}>.gps-557197710415889291.gps.gpsil [style*="--aspect:"]{aspect-ratio:var(--aspect)}.gps-557197710415889291.gps.gpsil [style*="--bg:"]{background:var(--bg)}.gps-557197710415889291.gps.gpsil [style*="--bga:"]{background-attachment:var(--bga)}.gps-557197710415889291.gps.gpsil [style*="--bgc:"]{background-color:var(--bgc)}.gps-557197710415889291.gps.gpsil [style*="--bgi:"]{background-image:var(--bgi)}.gps-557197710415889291.gps.gpsil [style*="--bgp:"]{background-position:var(--bgp)}.gps-557197710415889291.gps.gpsil [style*="--bgr:"]{background-repeat:var(--bgr)}.gps-557197710415889291.gps.gpsil [style*="--bgs:"]{background-size:var(--bgs)}.gps-557197710415889291.gps.gpsil [style*="--b:"]{border:var(--b)}.gps-557197710415889291.gps.gpsil [style*="--bb:"]{border-bottom:var(--bb)}.gps-557197710415889291.gps.gpsil [style*="--bc:"]{border-color:var(--bc)}.gps-557197710415889291.gps.gpsil [style*="--bblr:"]{border-bottom-left-radius:var(--bblr)}.gps-557197710415889291.gps.gpsil [style*="--bbrr:"]{border-bottom-right-radius:var(--bbrr)}.gps-557197710415889291.gps.gpsil [style*="--bl:"]{border-left:var(--bl)}.gps-557197710415889291.gps.gpsil [style*="--radius:"]{border-radius:var(--radius)}.gps-557197710415889291.gps.gpsil [style*="--bs:"]{border-style:var(--bs)}.gps-557197710415889291.gps.gpsil [style*="--bt:"]{border-top:var(--bt)}.gps-557197710415889291.gps.gpsil [style*="--btlr:"]{border-top-left-radius:var(--btlr)}.gps-557197710415889291.gps.gpsil [style*="--btrr:"]{border-top-right-radius:var(--btrr)}.gps-557197710415889291.gps.gpsil [style*="--bw:"]{border-width:var(--bw)}.gps-557197710415889291.gps.gpsil [style*="--shadow:"]{box-shadow:var(--shadow)}.gps-557197710415889291.gps.gpsil [style*="--c:"]{color:var(--c)}.gps-557197710415889291.gps.gpsil [style*="--cg:"]{-moz-column-gap:var(--cg);column-gap:var(--cg)}.gps-557197710415889291.gps.gpsil [style*="--ff:"]{font-family:var(--ff)}.gps-557197710415889291.gps.gpsil [style*="--size:"]{font-size:var(--size)}.gps-557197710415889291.gps.gpsil [style*="--weight:"]{font-weight:var(--weight)}.gps-557197710415889291.gps.gpsil [style*="--gtc:"]{grid-template-columns:var(--gtc)}.gps-557197710415889291.gps.gpsil [style*="--h:"]{height:var(--h)}.gps-557197710415889291.gps.gpsil [style*="--jc:"]{justify-content:var(--jc)}.gps-557197710415889291.gps.gpsil [style*="--lh:"]{line-height:var(--lh)}.gps-557197710415889291.gps.gpsil [style*="--m:"]{margin:var(--m)}.gps-557197710415889291.gps.gpsil [style*="--mb:"]{margin-bottom:var(--mb)}.gps-557197710415889291.gps.gpsil [style*="--objf:"]{-o-object-fit:var(--objf);object-fit:var(--objf)}.gps-557197710415889291.gps.gpsil [style*="--op:"]{opacity:var(--op)}.gps-557197710415889291.gps.gpsil [style*="--o:"]{order:var(--o)}.gps-557197710415889291.gps.gpsil [style*="--pc:"]{place-content:var(--pc)}.gps-557197710415889291.gps.gpsil [style*="--p:"]{padding:var(--p)}.gps-557197710415889291.gps.gpsil [style*="--pb:"]{padding-bottom:var(--pb)}.gps-557197710415889291.gps.gpsil [style*="--pl:"]{padding-left:var(--pl)}.gps-557197710415889291.gps.gpsil [style*="--pr:"]{padding-right:var(--pr)}.gps-557197710415889291.gps.gpsil [style*="--pt:"]{padding-top:var(--pt)}.gps-557197710415889291.gps.gpsil [style*="--ta:"]{text-align:var(--ta)}.gps-557197710415889291.gps.gpsil [style*="--ts:"]{text-shadow:var(--ts)}.gps-557197710415889291.gps.gpsil [style*="--t:"]{transform:var(--t)}.gps-557197710415889291.gps.gpsil [style*="--w:"]{width:var(--w)}@media only screen and (max-width:1024px){.gps-557197710415889291.gps.gpsil [style*="--aspect-tablet:"]{aspect-ratio:var(--aspect-tablet)}.gps-557197710415889291.gps.gpsil [style*="--size-tablet:"]{font-size:var(--size-tablet)}.gps-557197710415889291.gps.gpsil [style*="--h-tablet:"]{height:var(--h-tablet)}.gps-557197710415889291.gps.gpsil [style*="--lh-tablet:"]{line-height:var(--lh-tablet)}.gps-557197710415889291.gps.gpsil [style*="--pl-tablet:"]{padding-left:var(--pl-tablet)}.gps-557197710415889291.gps.gpsil [style*="--pr-tablet:"]{padding-right:var(--pr-tablet)}.gps-557197710415889291.gps.gpsil [style*="--w-tablet:"]{width:var(--w-tablet)}}@media only screen and (max-width:767px){.gps-557197710415889291.gps.gpsil [style*="--aspect-mobile:"]{aspect-ratio:var(--aspect-mobile)}.gps-557197710415889291.gps.gpsil [style*="--cg-mobile:"]{-moz-column-gap:var(--cg-mobile);column-gap:var(--cg-mobile)}.gps-557197710415889291.gps.gpsil [style*="--size-mobile:"]{font-size:var(--size-mobile)}.gps-557197710415889291.gps.gpsil [style*="--gtc-mobile:"]{grid-template-columns:var(--gtc-mobile)}.gps-557197710415889291.gps.gpsil [style*="--h-mobile:"]{height:var(--h-mobile)}.gps-557197710415889291.gps.gpsil [style*="--jc-mobile:"]{justify-content:var(--jc-mobile)}.gps-557197710415889291.gps.gpsil [style*="--lh-mobile:"]{line-height:var(--lh-mobile)}.gps-557197710415889291.gps.gpsil [style*="--mb-mobile:"]{margin-bottom:var(--mb-mobile)}.gps-557197710415889291.gps.gpsil [style*="--pb-mobile:"]{padding-bottom:var(--pb-mobile)}.gps-557197710415889291.gps.gpsil [style*="--pl-mobile:"]{padding-left:var(--pl-mobile)}.gps-557197710415889291.gps.gpsil [style*="--pr-mobile:"]{padding-right:var(--pr-mobile)}.gps-557197710415889291.gps.gpsil [style*="--pt-mobile:"]{padding-top:var(--pt-mobile)}.gps-557197710415889291.gps.gpsil [style*="--w-mobile:"]{width:var(--w-mobile)}}.gps-557197710415889291 .gp-relative{position:relative}.gps-557197710415889291 .gp-mx-auto{margin-left:auto;margin-right:auto}.gps-557197710415889291 .gp-mb-0{margin-bottom:0}.gps-557197710415889291 .gp-flex{display:flex}.gps-557197710415889291 .gp-grid{display:grid}.gps-557197710415889291 .gp-contents{display:contents}.gps-557197710415889291 .\!gp-hidden{display:none!important}.gps-557197710415889291 .gp-hidden{display:none}.gps-557197710415889291 .gp-h-full{height:100%}.gps-557197710415889291 .gp-w-full{width:100%}.gps-557197710415889291 .gp-max-w-full{max-width:100%}.gps-557197710415889291 .gp-flex-col{flex-direction:column}.gps-557197710415889291 .gp-gap-y-0{row-gap:0}.gps-557197710415889291 .gp-transition-colors{transition-duration:.15s;transition-property:color,background-color,border-color,text-decoration-color,fill,stroke;transition-timing-function:cubic-bezier(.4,0,.2,1)}.gps-557197710415889291 .gp-duration-200{transition-duration:.2s}.gps-557197710415889291 .gp-ease-in-out{transition-timing-function:cubic-bezier(.4,0,.2,1)}@media (max-width:1024px){.gps-557197710415889291 .tablet\:\!gp-hidden{display:none!important}.gps-557197710415889291 .tablet\:gp-hidden{display:none}}@media (max-width:767px){.gps-557197710415889291 .mobile\:\!gp-hidden{display:none!important}.gps-557197710415889291 .mobile\:gp-hidden{display:none}}.gps-557197710415889291 .\[\&_\*\]\:gp-max-w-full *{max-width:100%}.gps-557197710415889291 .\[\&_p\]\:gp-inline p{display:inline}.gps-557197710415889291 .\[\&_p\]\:after\:gp-whitespace-pre-wrap p:after{content:var(--tw-content);white-space:pre-wrap}.gps-557197710415889291 .\[\&_p\]\:after\:gp-content-\[\'\\A\'\] p:after{--tw-content:"\A";content:var(--tw-content)}</style>
+
+       
+      
+            <section
+              class="gp-mx-auto gp-max-w-full {% if section.settings.section_preload == "false" %}gps-lazy {% endif %}"
+              style="--w:100%;--w-tablet:100%;--w-mobile:100%;--pl:0px;--pl-tablet:0px;--pl-mobile:0px;--pr:0px;--pr-tablet:0px;--pr-mobile:0px"
+            >
+              
+    <div
+      enableLazyloadImage id="g3ivXKW-KF" data-id="g3ivXKW-KF"
+        style="--blockPadding:base;--pt:60px;--pb:40px;--pt-mobile:40px;--pb-mobile:20px;--d:grid;--d-tablet:grid;--d-mobile:grid;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--op:100%;--cg:32px;--pc:start;--gtc:minmax(0, 12fr);--w:100%;--w-tablet:100%;--w-mobile:100%;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll"
+        class="g3ivXKW-KF gp-mx-auto gp-mb-0 gp-grid gp-max-w-full gp-gap-y-0 gp-transition-colors gp-duration-200 gp-ease-in-out [&_*]:gp-max-w-full"
+    >
+    <div
+      enableLazyloadImage tag="Col" label="Block" type="component"
+      style="--jc:start"
+      class="g_crHazX8Z gp-relative gp-flex gp-flex-col"
+    >
+      
+  {% assign locationOrigin = request.origin | append: routes.root_url | split: '/' | join: '/' %}
+  <gp-text data-id="gycplRaLlQ">
+    <div
+      enableLazyloadImage parentTag="Col"
+        class="gycplRaLlQ "
+        style="--ta:center;--mb:60px;--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--op:100%"
+      >
+      <div class="gp-flex" style="--jc:center">
+        <h2
+          
+          data-gp-text
+          class="[&_p]:gp-inline [&_p]:after:gp-whitespace-pre-wrap [&_p]:after:gp-content-['\A'] gp-text"
+          style="--w:var(--g-ct-w);--w-tablet:var(--g-ct-w);--w-mobile:var(--g-ct-w);--ts:none;--ta:center;--ff:var(--g-font-Lovelo-Black, 'Lovelo Black'), var(--g-font-heading, heading);--weight:400;--size:46px;--size-tablet:46px;--size-mobile:30px;--lh:130%;--lh-tablet:130%;--lh-mobile:130%;--c:#424242;word-break:break-word;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll;--pl-mobile:12px;--pr-mobile:12px;overflow:hidden"
+        >{{ "sections.gp-global-section-557197710415889291.ggycplRaLlQ_text_html" | t | replace: '$locationOrigin', locationOrigin }}</h2>
+      </div>
+    </div>
+    </gp-text>
+    
+       
+      
+    <div
+      enableLazyloadImage parentTag="Col" id="g4Oea4Am3I" data-id="g4Oea4Am3I"
+        style="--mb:0px;--mb-mobile:30px;--d:grid;--d-tablet:grid;--d-mobile:grid;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--op:100%;--cg:8px;--cg-mobile:0px;--pc:start;--gtc:minmax(0, 4fr) minmax(0, 8fr);--gtc-mobile:minmax(0, 5fr) minmax(0, 7fr);--w:var(--g-ct-w, 1200px);--w-tablet:var(--g-ct-w, 100%);--w-mobile:100%;--bgc:transparent;--bgi:url();--bgp:50% 50%;--bgs:cover;--bgr:no-repeat;--bga:scroll"
+        class="g4Oea4Am3I gp-mx-auto gp-mb-0 gp-grid gp-max-w-full gp-gap-y-0 gp-transition-colors gp-duration-200 gp-ease-in-out [&_*]:gp-max-w-full"
+    >
+    <div
+      enableLazyloadImage tag="Col" label="Block" type="component"
+      style="--jc:center;--jc-mobile:center"
+      class="gSCe-O3ZD7 gp-relative gp-flex gp-flex-col"
+    >
+      <div
+    
+     data-id="g7mH-0LzqZ"
+    role="presentation"
+    class="gp-group/image g7mH-0LzqZ"
+    style="--mb:18px;--mb-mobile:14px;--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--op:100%;--ta:right"
+    >
+      <div
+        class="pointer-events-auto h-full gp-flex"
+        
+        class="gp-h-full gp-w-full"
+        style="--shadow:none;border-radius:inherit;--jc:right"
+      >
+        
+  <picture style="border-radius: inherit" class="gp-contents">
+  
+      <source media="(max-width: 767px)" srcset="https://cdn.shopify.com/s/files/1/0927/1430/3826/files/3.png?v=1741643043" />
+      <source media="(max-width: 1024px)" srcset="https://cdn.shopify.com/s/files/1/0927/1430/3826/files/3.png?v=1741643043" />
+      <img
+        
+        class="gp-h-full gp-max-w-full gp-flex"
+        src="https://cdn.shopify.com/s/files/1/0927/1430/3826/files/3.png?v=1741643043"
+        alt=""
+        fetchpriority="high"
+        style="--aspect:auto;--aspect-tablet:auto;--aspect-mobile:auto;--objf:cover;--w:70%;--w-tablet:70%;--w-mobile:70%;--h:auto;--h-tablet:auto;--h-mobile:auto;--b:solid;--bc:#000000;--bw:2px 2px 2px 2px;--btrr:16px;--bblr:16px;--bbrr:16px;--btlr:16px;--radiusType:custom;--shadow:none"
+      />
+    
+  </picture>
+      </div>
+  </div><div
+    
+     data-id="ga-s_mPDbh"
+    role="presentation"
+    class="gp-group/image ga-s_mPDbh"
+    style="--mb:20px;--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--op:100%;--ta:right"
+    >
+      <div
+        class="pointer-events-auto h-full gp-flex"
+        
+        class="gp-h-full gp-w-full"
+        style="--shadow:none;border-radius:inherit;--jc:right"
+      >
+        
+  <picture style="border-radius: inherit" class="gp-contents">
+  
+      <source media="(max-width: 767px)" srcset="https://cdn.shopify.com/s/files/1/0927/1430/3826/files/2.png?v=1741643044" />
+      <source media="(max-width: 1024px)" srcset="https://cdn.shopify.com/s/files/1/0927/1430/3826/files/2.png?v=1741643044" />
+      <img
+        
+        class="gp-h-full gp-max-w-full gp-flex"
+        src="https://cdn.shopify.com/s/files/1/0927/1430/3826/files/2.png?v=1741643044"
+        alt=""
+        fetchpriority="high"
+        style="--aspect:auto;--aspect-tablet:auto;--aspect-mobile:auto;--objf:cover;--w:70%;--w-tablet:70%;--w-mobile:70%;--h:auto;--h-tablet:auto;--h-mobile:auto;--b:solid;--bc:#000000;--bw:2px 2px 2px 2px;--btrr:16px;--bblr:16px;--bbrr:16px;--btlr:16px;--radiusType:custom;--shadow:none"
+      />
+    
+  </picture>
+      </div>
+  </div>
+    </div><div
+      enableLazyloadImage tag="Col" label="Block" type="component"
+      style="--jc:center;--jc-mobile:center"
+      class="g3X9soamQD gp-relative gp-flex gp-flex-col"
+    >
+      <div
+    
+     data-id="g1Xnce4Yv0"
+    role="presentation"
+    class="gp-group/image g1Xnce4Yv0"
+    style="--d:block;--d-tablet:block;--d-mobile:block;--bs:none;--bw:1px 1px 1px 1px;--bc:#121212;--shadow:none;--op:100%;--ta:center"
+    >
+      <div
+        class="pointer-events-auto h-full gp-flex"
+        
+        class="gp-h-full gp-w-full"
+        style="--shadow:none;border-radius:inherit;--jc:center"
+      >
+        
+  <picture style="border-radius: inherit" class="gp-contents">
+  
+      <source media="(max-width: 767px)" srcset="https://cdn.shopify.com/s/files/1/0927/1430/3826/files/1.png?v=1741643044" />
+      <source media="(max-width: 1024px)" srcset="https://cdn.shopify.com/s/files/1/0927/1430/3826/files/1.png?v=1741643044" />
+      <img
+        
+        class="gp-h-full gp-max-w-full gp-flex"
+        src="https://cdn.shopify.com/s/files/1/0927/1430/3826/files/1.png?v=1741643044"
+        alt=""
+        fetchpriority="high"
+        style="--aspect:auto;--aspect-tablet:auto;--aspect-mobile:auto;--objf:cover;--w:60%;--w-tablet:60%;--w-mobile:75%;--h:auto;--h-tablet:auto;--h-mobile:auto;--b:solid;--bc:#000000;--bw:2px 2px 2px 2px;--btrr:16px;--bblr:16px;--bbrr:16px;--btlr:16px;--radiusType:custom;--shadow:none"
+      />
+    
+  </picture>
+      </div>
+  </div>
+    </div>
+    </div>
+   
+    
+    </div>
+    </div>
+  
+            </section>
+           
+    
+
+
+{% schema %}
+  {
+    "presets": [{ "name": "PRIMA E DOPO SECTION" }],
+    "name": "PRIMA E DOPO SECTION",
+    "tag": "section",
+    "class": "gps-557197710415889291 gps gpsil",
+    "settings": [{"type":"paragraph","content":"Section design by GemPages. [Click here to start design](https://admin.shopify.com/store/djm1vf-jd/apps/gempages-cro/app/shopify/edit?pageType=THEME_SECTION&editorId=557197710415889291)"},{"type":"select","label":"Section Preload","id":"section_preload","options":[{"label":"On","value":"true"},{"label":"Off","value":"false"},{"label":"Off Lazy Script","value":"off_lazy_script"}],"default":"off_lazy_script"},{"type":"text","label":"Checksum","id":"checksum"}],
+    "blocks": [{"type": "@app"}],
+    "locales": {"it":{"ggycplRaLlQ_text_html":"oltre +1000 donne Con Risultati reali"}}
+  }
+{% endschema %}
