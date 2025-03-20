@@ -17,7 +17,7 @@
       },
       "blocks": {
         "gp_app_kaching-bundles_gmBVX_oUl2": {
-          "type": "shopify://apps/kaching-bundles/blocks/app-block/6c637362-a106-4a32-94ac-94dcfd68cdb8",
+          "type": "shopify:\/\/apps\/kaching-bundles\/blocks\/app-block\/6c637362-a106-4a32-94ac-94dcfd68cdb8",
           "settings": {
             "product": "{{ product }}"
           }
