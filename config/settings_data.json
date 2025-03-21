@@ -43,6 +43,7 @@
     "product_info_alignment": "start",
     "cart_type": "drawer",
     "cart_icon": "shopping_basket",
+    "cart_empty_button_link": "shopify://products/kit-viso-edgy",
     "cart_show_free_shipping_threshold": true,
     "cart_free_shipping_threshold": 49.9,
     "favicon": "shopify://shop_images/Senza_titolo_180_x_180_px_3.png",
