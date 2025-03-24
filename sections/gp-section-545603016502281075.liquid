@@ -627,6 +627,8 @@
     <gp-product-button
       class="gp-product-button"
       gp-data-wrapper="true"
+      gp-label-out-of-stock="{{section.settings.ggAeDOVU1ig_outOfStockLabel}}"
+      gp-label-unavailable="{{section.settings.ggAeDOVU1ig_unavailableLabel}}"
       gp-data='{"setting":{"actionEffect":"buy-now","errorMessage":"Cannot add product to cart","successMessage":"Add product to cart successfully","enableSuccessMessage":true,"enableErrorMessage":true,"label":"Aggiungi al carrello","outOfStockLabel":"Out of stock","errorType":"built-in","customURL":{"link":"/cart","target":"_self"}},"styles":{"errorTypo":{"type":"paragraph-2","attrs":{"color":"error"}},"successTypo":{"type":"paragraph-2","attrs":{"color":"success"}}},"disabled":"{{variant.available}}","variantID":"{{variant.id}}","totalVariant":"{{product.variants.size}}"}' 
        gp-href="{{ request.origin }}{{ routes.root_url | split: '/' | join: '/' }}/cart"
        data-variant-selection-required-message="{{section.settings.ggAeDOVU1ig_variantSelectionRequiredMessage}}"
@@ -720,7 +722,7 @@
     
       <span
         data-gp-text
-        class="group-hover/button:!gp-text-inherit gp-button-text-only gp-break-words group-data-[state=loading]/button:gp-invisible [&_p]:gp-whitespace-pre-line gp-z-1 gp-h-full gp-flex gp-items-center gp-overflow-hidden 
+        class="gp-content-product-button group-hover/button:!gp-text-inherit gp-button-text-only gp-break-words group-data-[state=loading]/button:gp-invisible [&_p]:gp-whitespace-pre-line gp-z-1 gp-h-full gp-flex gp-items-center gp-overflow-hidden 
         "
         style="--size:26px;--size-tablet:16px;--size-mobile:22px;--c:#424242;--hvr-c:#ffffff"
       >
@@ -790,7 +792,7 @@
     }
   </style>
     <button
-      type="button" data-id="gAeDOVU1ig" aria-label="Out of stock"
+      type="button" data-id="gAeDOVU1ig" aria-label="{{section.settings.ggAeDOVU1ig_outOfStockLabel}}"
       gp-data-hidden="{% if variant.available %}true{% endif %}"
       data-state="idle"
       class="gAeDOVU1ig-sold-out gp-button-base gp-group/button gp-rounded-none gp-max-w-full gp-relative gp-inline-flex gp-items-center gp-justify-center gp-no-underline gp-transition-colors gp-duration-300 disabled:gp-btn-disabled disabled:gp-opacity-30 disabled:gp-pointer-events-none gp-button-sold-out btn-disabled gp-opacity-30 gp-cursor-default"
@@ -802,11 +804,11 @@
     
       <span
         data-gp-text
-        class="group-hover/button:!gp-text-inherit gp-button-text-only gp-break-words group-data-[state=loading]/button:gp-invisible [&_p]:gp-whitespace-pre-line gp-z-1 gp-h-full gp-flex gp-items-center gp-overflow-hidden 
+        class="gp-content-product-button group-hover/button:!gp-text-inherit gp-button-text-only gp-break-words group-data-[state=loading]/button:gp-invisible [&_p]:gp-whitespace-pre-line gp-z-1 gp-h-full gp-flex gp-items-center gp-overflow-hidden 
         "
         style="--size:26px;--size-tablet:16px;--size-mobile:22px;--c:#424242;--hvr-c:#ffffff"
       >
-        {{ section.settings.ggAeDOVU1ig_outOfStockLabel }}
+        {{section.settings.ggAeDOVU1ig_outOfStockLabel}}
       </span>
       </div>
     
@@ -833,16 +835,6 @@
                 style="--jc:center"
               >
                 
-  <style title="gp-accordion-item-style">
-  .gp-accordion-item .gp-accordion-item-gYwWqh_uOq-0:hover .gp-collapsible-icon.gp-accordion-item-hover, .gp-accordion-item .gp-accordion-item-gYwWqh_uOq-0:hover .gp-icon.gp-accordion-item-hover 
-     {
-        color: #424242 !important
-      }
-    .gp-accordion-item .gp-accordion-item-gYwWqh_uOq-0:hover .gp-collapsible-icon.gp-accordion-item-active, .gp-accordion-item .gp-accordion-item-gYwWqh_uOq-0:hover .gp-icon.gp-accordion-item-active
-     {
-        color: #ffffff !important
-      }
-  </style>
   <div class="gp-overflow-clip" style="--w:100%;--w-tablet:100%;--w-mobile:100%;--height-iconCollapseSize:16px;--height-configIconSize:16px;--bs:none;--bw:1px 1px 1px 1px;--bc:#000000;--bg:transparent;--shadow:none;--bblr:8px;--bbrr:8px;--btlr:8px;--btrr:8px">
     <div
       data-index="0"
@@ -857,10 +849,17 @@
         class="gYwWqh_uOq gp-accordion-item-gYwWqh_uOq-0 gp-flex gp-items-center gp-accordion-item_header gp-cursor-pointer"
         style="--pl:24px;--pr:24px;--pt:8px;--pb:8px;--h:auto;--h-tablet:auto;--h-mobile:auto;--fd:row-reverse;--jc:space-between;gap:16px;--bgc:#f6b1ac;--hvr-bgc:rgba(246, 177, 172, 0.43);--c:#424242;--hvr-c:#424242;--bs:none;--hvr-bs:solid;--bw:0px 0px 1px 0px;--hvr-bw:0px 0px 1px 0px;--bc:#121212;--hvr-bc:#121212"
       >
-       <style class="accordion-style">.gYwWqh_uOq.gp-accordion-item-gYwWqh_uOq-0:hover .gp-collapsible-icon, .gYwWqh_uOq.gp-accordion-item-gYwWqh_uOq-0:hover .gp-icon {
-                  color: #424242
-              } {
-          }</style>
+       <style class="accordion-style">.gp-accordion-item-gYwWqh_uOq-0:hover 
+      {
+        .gp-collapsible-icon { 
+          color: #424242 !important;
+        }
+
+        .gp-icon { 
+            color: #424242 !important;
+        }
+      }
+    </style>
         <div class="gp-inline-flex">
         <span
             style="--c:#424242;--hvr-c:#424242;width:16px;height:16px"
@@ -943,16 +942,6 @@
                 style="--jc:center"
               >
                 
-  <style title="gp-accordion-item-style">
-  .gp-accordion-item .gp-accordion-item-gYwWqh_uOq-1:hover .gp-collapsible-icon.gp-accordion-item-hover, .gp-accordion-item .gp-accordion-item-gYwWqh_uOq-1:hover .gp-icon.gp-accordion-item-hover 
-     {
-        color: #424242 !important
-      }
-    .gp-accordion-item .gp-accordion-item-gYwWqh_uOq-1:hover .gp-collapsible-icon.gp-accordion-item-active, .gp-accordion-item .gp-accordion-item-gYwWqh_uOq-1:hover .gp-icon.gp-accordion-item-active
-     {
-        color: #ffffff !important
-      }
-  </style>
   <div class="gp-overflow-clip" style="--w:100%;--w-tablet:100%;--w-mobile:100%;--height-iconCollapseSize:16px;--height-configIconSize:16px;--bs:none;--bw:1px 1px 1px 1px;--bc:#000000;--bg:transparent;--shadow:none;--bblr:8px;--bbrr:8px;--btlr:8px;--btrr:8px">
     <div
       data-index="1"
@@ -967,10 +956,17 @@
         class="gYwWqh_uOq gp-accordion-item-gYwWqh_uOq-1 gp-flex gp-items-center gp-accordion-item_header gp-cursor-pointer"
         style="--pl:24px;--pr:24px;--pt:8px;--pb:8px;--h:auto;--h-tablet:auto;--h-mobile:auto;--fd:row-reverse;--jc:space-between;gap:16px;--bgc:#f6b1ac;--hvr-bgc:rgba(246, 177, 172, 0.43);--c:#424242;--hvr-c:#424242;--bs:none;--hvr-bs:solid;--bw:0px 0px 1px 0px;--hvr-bw:0px 0px 1px 0px;--bc:#121212;--hvr-bc:#121212"
       >
-       <style class="accordion-style">.gYwWqh_uOq.gp-accordion-item-gYwWqh_uOq-1:hover .gp-collapsible-icon, .gYwWqh_uOq.gp-accordion-item-gYwWqh_uOq-1:hover .gp-icon {
-                  color: #424242
-              } {
-          }</style>
+       <style class="accordion-style">.gp-accordion-item-gYwWqh_uOq-1:hover 
+      {
+        .gp-collapsible-icon { 
+          color: #424242 !important;
+        }
+
+        .gp-icon { 
+            color: #424242 !important;
+        }
+      }
+    </style>
         <div class="gp-inline-flex">
         <span
             style="--c:#424242;--hvr-c:#424242;width:16px;height:16px"
@@ -1053,16 +1049,6 @@
                 style="--jc:center"
               >
                 
-  <style title="gp-accordion-item-style">
-  .gp-accordion-item .gp-accordion-item-gYwWqh_uOq-2:hover .gp-collapsible-icon.gp-accordion-item-hover, .gp-accordion-item .gp-accordion-item-gYwWqh_uOq-2:hover .gp-icon.gp-accordion-item-hover 
-     {
-        color: #424242 !important
-      }
-    .gp-accordion-item .gp-accordion-item-gYwWqh_uOq-2:hover .gp-collapsible-icon.gp-accordion-item-active, .gp-accordion-item .gp-accordion-item-gYwWqh_uOq-2:hover .gp-icon.gp-accordion-item-active
-     {
-        color: #ffffff !important
-      }
-  </style>
   <div class="gp-overflow-clip" style="--w:100%;--w-tablet:100%;--w-mobile:100%;--height-iconCollapseSize:16px;--height-configIconSize:16px;--bs:none;--bw:1px 1px 1px 1px;--bc:#000000;--bg:transparent;--shadow:none;--bblr:8px;--bbrr:8px;--btlr:8px;--btrr:8px">
     <div
       data-index="2"
@@ -1077,10 +1063,17 @@
         class="gYwWqh_uOq gp-accordion-item-gYwWqh_uOq-2 gp-flex gp-items-center gp-accordion-item_header gp-cursor-pointer"
         style="--pl:24px;--pr:24px;--pt:8px;--pb:8px;--h:auto;--h-tablet:auto;--h-mobile:auto;--fd:row-reverse;--jc:space-between;gap:16px;--bgc:#f6b1ac;--hvr-bgc:rgba(246, 177, 172, 0.43);--c:#424242;--hvr-c:#424242;--bs:none;--hvr-bs:solid;--bw:0px 0px 1px 0px;--hvr-bw:0px 0px 1px 0px;--bc:#121212;--hvr-bc:#121212"
       >
-       <style class="accordion-style">.gYwWqh_uOq.gp-accordion-item-gYwWqh_uOq-2:hover .gp-collapsible-icon, .gYwWqh_uOq.gp-accordion-item-gYwWqh_uOq-2:hover .gp-icon {
-                  color: #424242
-              } {
-          }</style>
+       <style class="accordion-style">.gp-accordion-item-gYwWqh_uOq-2:hover 
+      {
+        .gp-collapsible-icon { 
+          color: #424242 !important;
+        }
+
+        .gp-icon { 
+            color: #424242 !important;
+        }
+      }
+    </style>
         <div class="gp-inline-flex">
         <span
             style="--c:#424242;--hvr-c:#424242;width:16px;height:16px"
@@ -1163,16 +1156,6 @@
                 style="--jc:center"
               >
                 
-  <style title="gp-accordion-item-style">
-  .gp-accordion-item .gp-accordion-item-gYwWqh_uOq-3:hover .gp-collapsible-icon.gp-accordion-item-hover, .gp-accordion-item .gp-accordion-item-gYwWqh_uOq-3:hover .gp-icon.gp-accordion-item-hover 
-     {
-        color: #424242 !important
-      }
-    .gp-accordion-item .gp-accordion-item-gYwWqh_uOq-3:hover .gp-collapsible-icon.gp-accordion-item-active, .gp-accordion-item .gp-accordion-item-gYwWqh_uOq-3:hover .gp-icon.gp-accordion-item-active
-     {
-        color: #ffffff !important
-      }
-  </style>
   <div class="gp-overflow-clip" style="--w:100%;--w-tablet:100%;--w-mobile:100%;--height-iconCollapseSize:16px;--height-configIconSize:16px;--bs:none;--bw:1px 1px 1px 1px;--bc:#000000;--bg:transparent;--shadow:none;--bblr:8px;--bbrr:8px;--btlr:8px;--btrr:8px">
     <div
       data-index="3"
@@ -1187,10 +1170,17 @@
         class="gYwWqh_uOq gp-accordion-item-gYwWqh_uOq-3 gp-flex gp-items-center gp-accordion-item_header gp-cursor-pointer"
         style="--pl:24px;--pr:24px;--pt:8px;--pb:8px;--h:auto;--h-tablet:auto;--h-mobile:auto;--fd:row-reverse;--jc:space-between;gap:16px;--bgc:#f6b1ac;--hvr-bgc:rgba(246, 177, 172, 0.43);--c:#424242;--hvr-c:#424242;--bs:none;--hvr-bs:solid;--bw:0px 0px 1px 0px;--hvr-bw:0px 0px 1px 0px;--bc:#121212;--hvr-bc:#121212"
       >
-       <style class="accordion-style">.gYwWqh_uOq.gp-accordion-item-gYwWqh_uOq-3:hover .gp-collapsible-icon, .gYwWqh_uOq.gp-accordion-item-gYwWqh_uOq-3:hover .gp-icon {
-                  color: #424242
-              } {
-          }</style>
+       <style class="accordion-style">.gp-accordion-item-gYwWqh_uOq-3:hover 
+      {
+        .gp-collapsible-icon { 
+          color: #424242 !important;
+        }
+
+        .gp-icon { 
+            color: #424242 !important;
+        }
+      }
+    </style>
         <div class="gp-inline-flex">
         <span
             style="--c:#424242;--hvr-c:#424242;width:16px;height:16px"
@@ -1273,16 +1263,6 @@
                 style="--jc:center"
               >
                 
-  <style title="gp-accordion-item-style">
-  .gp-accordion-item .gp-accordion-item-gYwWqh_uOq-4:hover .gp-collapsible-icon.gp-accordion-item-hover, .gp-accordion-item .gp-accordion-item-gYwWqh_uOq-4:hover .gp-icon.gp-accordion-item-hover 
-     {
-        color: #424242 !important
-      }
-    .gp-accordion-item .gp-accordion-item-gYwWqh_uOq-4:hover .gp-collapsible-icon.gp-accordion-item-active, .gp-accordion-item .gp-accordion-item-gYwWqh_uOq-4:hover .gp-icon.gp-accordion-item-active
-     {
-        color: #ffffff !important
-      }
-  </style>
   <div class="gp-overflow-clip" style="--w:100%;--w-tablet:100%;--w-mobile:100%;--height-iconCollapseSize:16px;--height-configIconSize:16px;--bs:none;--bw:1px 1px 1px 1px;--bc:#000000;--bg:transparent;--shadow:none;--bblr:8px;--bbrr:8px;--btlr:8px;--btrr:8px">
     <div
       data-index="4"
@@ -1297,10 +1277,17 @@
         class="gYwWqh_uOq gp-accordion-item-gYwWqh_uOq-4 gp-flex gp-items-center gp-accordion-item_header gp-cursor-pointer"
         style="--pl:24px;--pr:24px;--pt:8px;--pb:8px;--h:auto;--h-tablet:auto;--h-mobile:auto;--fd:row-reverse;--jc:space-between;gap:16px;--bgc:#f6b1ac;--hvr-bgc:rgba(246, 177, 172, 0.43);--c:#424242;--hvr-c:#424242;--bs:none;--hvr-bs:solid;--bw:0px 0px 1px 0px;--hvr-bw:0px 0px 1px 0px;--bc:#121212;--hvr-bc:#121212"
       >
-       <style class="accordion-style">.gYwWqh_uOq.gp-accordion-item-gYwWqh_uOq-4:hover .gp-collapsible-icon, .gYwWqh_uOq.gp-accordion-item-gYwWqh_uOq-4:hover .gp-icon {
-                  color: #424242
-              } {
-          }</style>
+       <style class="accordion-style">.gp-accordion-item-gYwWqh_uOq-4:hover 
+      {
+        .gp-collapsible-icon { 
+          color: #424242 !important;
+        }
+
+        .gp-icon { 
+            color: #424242 !important;
+        }
+      }
+    </style>
         <div class="gp-inline-flex">
         <span
             style="--c:#424242;--hvr-c:#424242;width:16px;height:16px"
@@ -1383,16 +1370,6 @@
                 style="--jc:center"
               >
                 
-  <style title="gp-accordion-item-style">
-  .gp-accordion-item .gp-accordion-item-gYwWqh_uOq-5:hover .gp-collapsible-icon.gp-accordion-item-hover, .gp-accordion-item .gp-accordion-item-gYwWqh_uOq-5:hover .gp-icon.gp-accordion-item-hover 
-     {
-        color: #424242 !important
-      }
-    .gp-accordion-item .gp-accordion-item-gYwWqh_uOq-5:hover .gp-collapsible-icon.gp-accordion-item-active, .gp-accordion-item .gp-accordion-item-gYwWqh_uOq-5:hover .gp-icon.gp-accordion-item-active
-     {
-        color: #ffffff !important
-      }
-  </style>
   <div class="gp-overflow-clip" style="--w:100%;--w-tablet:100%;--w-mobile:100%;--height-iconCollapseSize:16px;--height-configIconSize:16px;--bs:none;--bw:1px 1px 1px 1px;--bc:#000000;--bg:transparent;--shadow:none;--bblr:8px;--bbrr:8px;--btlr:8px;--btrr:8px">
     <div
       data-index="5"
@@ -1407,10 +1384,17 @@
         class="gYwWqh_uOq gp-accordion-item-gYwWqh_uOq-5 gp-flex gp-items-center gp-accordion-item_header gp-cursor-pointer"
         style="--pl:24px;--pr:24px;--pt:8px;--pb:8px;--h:auto;--h-tablet:auto;--h-mobile:auto;--fd:row-reverse;--jc:space-between;gap:16px;--bgc:#f6b1ac;--hvr-bgc:rgba(246, 177, 172, 0.43);--c:#424242;--hvr-c:#424242;--bs:none;--hvr-bs:solid;--bw:0px 0px 1px 0px;--hvr-bw:0px 0px 1px 0px;--bc:#121212;--hvr-bc:#121212"
       >
-       <style class="accordion-style">.gYwWqh_uOq.gp-accordion-item-gYwWqh_uOq-5:hover .gp-collapsible-icon, .gYwWqh_uOq.gp-accordion-item-gYwWqh_uOq-5:hover .gp-icon {
-                  color: #424242
-              } {
-          }</style>
+       <style class="accordion-style">.gp-accordion-item-gYwWqh_uOq-5:hover 
+      {
+        .gp-collapsible-icon { 
+          color: #424242 !important;
+        }
+
+        .gp-icon { 
+            color: #424242 !important;
+        }
+      }
+    </style>
         <div class="gp-inline-flex">
         <span
             style="--c:#424242;--hvr-c:#424242;width:16px;height:16px"
